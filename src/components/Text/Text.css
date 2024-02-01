@@ -1,0 +1,209 @@
+/**
+ * базовое оформление текста
+ */
+.Text {
+  margin: 0;
+  padding: 0;
+
+  width:  auto;
+  height: auto;
+
+  border: none;  
+}
+
+/**
+ * Варианты внешнего вида радио кнопки кнопки
+ */
+.alert_TextView {
+  color: red;
+}
+
+.brand_TextView {
+  color: #0071b2;
+}
+
+.ghost_TextView {
+  color: #ffffff4d;
+}
+
+.link_TextView {
+  color: #0f9fff;
+}
+
+.linkMinor_TextView {
+  color: #57bcff;
+}
+
+.primary_TextView {
+  color: #fafafa;
+}
+
+.secondary_TextView {
+  color: #ffffff99;
+}
+
+.success_TextView {
+  color: #0fae79;
+}
+
+.warning_TextView {
+  color: #e68200;
+}
+
+/**
+ *  Гарнитура
+ */
+.primary_TextFont {
+  font-family: "Inter",-apple-system,BlinkMacSystemFont,"Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+.mono_TextFont {
+  font-family: source-code-pro,Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+/**
+*  Высота строки
+*/
+.lineHeight_2XS {
+  line-height: 1.1em;
+}
+
+.lineHeight_XS {
+  line-height: 1.2em;
+}
+
+.lineHeight_S {
+  line-height: 1.4em;
+}
+
+.lineHeight_M {
+  line-height: 1.5em;
+}
+
+.lineHeight_L {
+  line-height: 1.6em;
+}
+
+/**
+*  Межбуквенное расстояние
+*/
+.spacing_XS {
+  letter-spacing: .06em;
+}
+
+.spacing_S {
+  letter-spacing: .1em;
+}
+
+.spacing_M {
+  letter-spacing: .14em;
+}
+
+.spacing_L {
+  letter-spacing: .2em;
+}
+
+/**
+ *  Насыщенность
+ */ 
+.black {
+  font-weight: 900;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+/**
+ *  Выравнивание
+ */
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/**
+ *  Поведение контейнера с текстом в документе (блочный или строчный элемент)
+ */
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+/**
+ * Размер текста
+ */
+.sizeText_6XL {
+  font-size: 96px;
+}
+
+.sizeText_5XL {
+  font-size: 72px;
+}
+
+.sizeText_4XL {
+  font-size: 48px;
+}
+
+.sizeText_3XL {
+  font-size: 32px;
+}
+
+.sizeText_2XL {
+  font-size: 24px;
+}
+
+.sizeText_XL {
+  font-size: 20px;
+}
+
+.sizeText_L {
+  font-size: 18px;
+}
+
+.sizeText_M {
+  font-size: 16px;
+}
+
+.sizeText_S {
+  font-size: 14px;
+}
+
+.sizeText_XS {
+  font-size: 12px;
+}
+
+.sizeText_2XS {
+  font-size: 10px;
+}

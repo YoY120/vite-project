@@ -1,0 +1,134 @@
+import React, { Component, useState }  from 'react'
+import './storybook.css'
+import Button from '../../components/Button/Button';
+import TextField from '../../components/TextField/TextField';
+import { TextFieldSize, TextFieldStatus } from '../../components/TextField/types';
+import Radio from '../../components/Radio';
+import { RadioSize, RadioViewType } from '../../components/Radio/types';
+import { CheckboxSize, CheckboxViewType } from '../../components/Checkbox/types';
+import Checkbox from '../../components/Checkbox';
+import { SwitchSize, SwitchViewType } from '../../components/Switch/types';
+import Text from '../../components/Text/Text';
+import { Aling, Display, SizeText, TextFont, TextViewType, Weight } from '../../components/Text/types';
+import Switch from '../../components/Switch/Switch';
+import TextPage from './componentsPage/TextPage';
+import ButtonPage from './componentsPage/ButtonPage';
+import TextFieldPage from './componentsPage/TextFieldPage';
+import RadioPage from './componentsPage/RadioPage';
+import CheckboxPage from './componentsPage/CheckboxPage';
+import SwichPage from './componentsPage/SwichPage';
+
+type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text'; 
+
+const Storybook = () => {
+  /**
+   *  Переключение компонентов
+   */
+  const [hidden, setHidden] = useState<WindowTypeButton>('Button');
+
+//  --------------------------------------------------------------------------------------------
+
+
+  const renderInternalContent = () => {
+    switch (hidden) {
+      /**
+       * BUTTON
+       */
+      case ('Button'): 
+        return (
+          <ButtonPage/>
+        )
+      /**
+       *  INPUT
+       */
+      case ('Input'): 
+        return (
+          <TextFieldPage/>
+        )
+      /**
+       * Кнопка RADIO 
+       */
+      case ('Radio'): 
+        return (
+          <RadioPage/>
+        )
+      /**
+       * CHECKBOX
+       */
+      case ('Checkbox'):
+        return (
+          <CheckboxPage/>
+        )
+      /**
+       * Switch
+       */
+      case ('Switch'):
+        return (
+          <SwichPage/>
+        );
+      /**
+       *  CHIPS
+       */
+      case ('Chips'):
+        return (
+          <div className='styleBoxButton'>
+          <div>
+            ХЗ
+          </div>
+        </div>
+        );
+      case ('Text'):
+        return (
+          <TextPage/>
+        )
+    }
+  }
+
+  /**
+   *  Рендер Меню
+   */
+  const renderInternalMenu = () => (
+    <div className="styleBlock">
+      <Button
+        label='Button'
+        onClick={() => setHidden('Button')}
+      />
+      <Button
+        label='Input'
+        onClick={() => setHidden('Input')}
+      />
+      <Button
+        label='Radio'
+        onClick={() => setHidden('Radio')}
+      />
+      <Button
+        label='Checbox'
+        onClick={() => setHidden('Checkbox')}
+      />
+      <Button
+        label='Switch'
+        onClick={() => setHidden('Switch')}
+      />
+      <Button
+        label='Chips'
+        onClick={() => setHidden('Chips')}
+      />
+      <Button
+        label='Text'
+        onClick={() => setHidden('Text')}
+      />
+    </div>
+  )
+
+  /**
+   * Рендер Меню и Контента
+   */
+  return (
+    <>
+      {renderInternalMenu()}
+      {renderInternalContent()}
+    </>
+  )
+}
+
+export default Storybook;

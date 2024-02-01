@@ -1,0 +1,67 @@
+.labelRadio {
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+}
+
+.Checkbox {
+  display: flex;
+
+  width: auto;
+  height: auto;
+
+  margin: 0px;
+}
+
+.primary {
+  color-scheme: white;
+  color: white
+}
+
+.primary:hover {
+  color-scheme: blue;
+  color: blue;
+}
+
+.ghost {
+  color-scheme: rgba(128, 128, 128, 0.486);
+  color:  rgba(128, 128, 128, 0.486);
+}
+
+.ghost:hover {
+  color-scheme: rgba(128, 128, 128, 0.486);
+  color:  rgba(128, 128, 128, 0.486);
+}
+
+.L_Checkbox {
+  width: 15px;
+}
+
+.L_Checkbox_Font {
+  font-size: 18px;
+}
+
+.M_Checkbox {
+  width: 13px;
+}
+
+.M_Checkbox_Font {
+  font-size: 16px;
+}
+
+.S_Checkbox {
+  width: 10px;
+}
+
+.S_Checkbox_Font {
+  font-size: 14px;
+}
+
+.XS_Checkbox {
+  width: 6px;
+}
+
+.XS_Checkbox_Font{
+  font-size: 12px;
+}

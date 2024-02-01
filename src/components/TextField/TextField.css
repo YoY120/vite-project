@@ -1,0 +1,129 @@
+/**
+ * Основыный стили у input
+ */
+.Imput {
+  display: flex;
+  align-items: center;
+
+  width: 300px;
+
+  background: rgba(86, 86, 86, 0);
+}
+
+/**
+ * Стандарный стиль
+ */
+.default {
+  border: 1px solid var(--control-default-border-border, rgba(86, 86, 86, 0.808));
+}
+
+/**
+ *  Стиль input при успешной операции
+ */
+.success {
+  border: 1px solid var(--control-default-border-bg-border-success, #34E8AC);
+}
+
+/**
+ *  Стиль input при ошибке
+ */
+.warning {
+  border: 1px solid var(--control-default-border-bg-border-warning, #F2C94C);
+}
+
+/**
+ *  Стиль input при изменении
+ */
+.alert {
+  border: 1px solid var(--control-default-border-border-alert, #973A39);
+}
+
+/**
+ * Размер input L
+ */
+.L_input {
+  padding: 0 16px;
+  border-radius: 12px;
+  height: 48px;
+
+  font-size: 18px;
+}
+
+/**
+ * Размер input M
+ */
+.M_input {
+  padding: 0 12px;
+  border-radius: 10px;
+  height: 40px;
+
+  font-size: 16px;
+}
+
+/**
+ *  Размер input S
+ */
+.S_input {
+  padding: 0 8px;
+  border-radius: 8px;
+  height: 32px;
+
+  font-size: 14px;
+}
+
+/**
+ *  Размер input XS
+ */
+.XS_input {
+  padding: 0 8px;
+  border-radius: 6px;
+  height: 24px;
+
+  font-size: 12px;
+}
+
+/**
+ * Размер input L
+ */
+.L_Caption {
+  font-size: 16px;
+}
+
+/**
+ * Размер input M
+ */
+.M_Caption {
+  font-size: 14px;
+}
+
+/**
+ *  Размер input S
+ */
+.S_Caption {
+  font-size: 12px;
+}
+
+/**
+ *  Размер input XS
+ */
+.XS_Caption {
+  font-size: 10px;
+}
+
+/**
+ *  Неактивный input
+ */
+.disabled {
+  border: 1px solid rgba(250, 250, 250, 0.00);
+  background: rgba(250, 250, 250, 0.15);
+}
+
+.Label {
+  display: flex;
+  height: auto;
+} 
+
+.Caption {
+  display: flex;
+  height: auto;
+}

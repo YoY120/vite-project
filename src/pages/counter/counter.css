@@ -1,0 +1,24 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.buttonStyle {
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+}
+
+.imputValue {
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid gray; 
+  background-color: cornsilk;
+  
+  color: black;
+}
+
