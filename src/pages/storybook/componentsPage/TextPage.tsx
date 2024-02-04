@@ -74,7 +74,7 @@ const TextPage: FC<TextPageProps> = ({isDarkTheme, handleThemeClick}) => {
           isDarkTheme={isDarkTheme}
           label='светлая / темная тема'
           view='Secondary'
-          onClick={() => handleThemeClick}
+          onClick={handleThemeClick}
         />
       </div>
 
