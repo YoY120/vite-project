@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import './App.css'
 import Storybook from './pages/storybook'
 import Button from './components/Button/Button';
@@ -6,14 +6,19 @@ import Counter from './pages/counter/counter';
 // import { MyCalculate } from './myCalculate/myCalculate';
 import { Calcul } from './calcul/calcul';
 import TaskPage from './pages/TaskPage/TaskPage';
+import TextPage from './pages/storybook/componentsPage/TextPage';
 
 type PageTypes = 'storybook' | 'counter' | 'calculate_(Button)' | 'myCalculate_(input)' | 'taskPage'
 
-function App() {
+const App: FC = () => {
   const [page, setPage] = useState<PageTypes>('storybook');
   
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
 
+  const handleThemeClickDark = () => {
+    setIsDarkTheme(!isDarkTheme);
+  }
+  
   const renderContent = () => {
     switch (page) {
       case 'storybook': return <Storybook/>;
@@ -21,7 +26,7 @@ function App() {
       // case 'myCalculate (input)': return <MyCalculate/>;
       case 'calculate_(Button)': return <Calcul/>;
       case 'myCalculate_(input)': return null;
-      case 'taskPage': return <TaskPage/>
+      case 'taskPage': return <TaskPage/>;
     }
   }
 
@@ -39,6 +44,10 @@ function App() {
     <>
       {renderNavigation()}
       {renderContent()}
+      <TextPage
+        isDarkTheme = {isDarkTheme ? true : false}
+        handleThemeClick = {handleThemeClickDark}
+        />
     </>
   )
 }

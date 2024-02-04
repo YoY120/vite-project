@@ -13,34 +13,21 @@ const Switch: FC<SwitchProps> = ({
   size = 'L',
   onChange = () => null,
 }) => {
-  const SwitchClassName = ` ${view ? view : ''} 
-  ${size}_Switch`;
+  const SwitchClassName = `toggleSwitch ${checked === false ? 'toggleSwitch_befo' : 'toggleSwitch_after'}`;
 
+  const CheckboxInput = `checkboxInput ${checked === false ? 'checkboxInput_befo' : 'checkboxInput_after'}`;
 
   return (
-    // <div>
-    //   <label className = "labelSwitch">
-    //     <input 
-    //       className = {SwitchClassName} 
-    //       checked = {checked} 
-    //       disabled = {disabled} 
-    //       onChange = {onChange}
-    //       type = "checkbox"
-    //     />
-    //     <span 
-    //       className = {`${view ? view : ''} 
-    //       ${size === 'L' ? 'L_Switch_Font' : ''} 
-    //       ${size === 'M' ? 'M_Switch_Font' : ''} 
-    //       ${size === 'S' ? 'S_Switch_Font' : ''} 
-    //       ${size === 'XS' ? 'XS_Switch_Font' : ''}`}>
-    //         {label}
-    //     </span>
-    //   </label> 
-    // </div>
     <div className="switchContainer">
       <div className="toggle-switch">
-        <input type="checkbox" id="checkboxInput" disabled = {disabled} checked = {checked} onChange = {onChange}/>
-          <label htmlFor="checkboxInput" className="toggleSwitch"></label>
+        <label  className={SwitchClassName}>
+          <input
+            className= {CheckboxInput}
+            disabled = {disabled} 
+            checked = {checked}
+            onChange = {onChange}
+          />
+        </label>
       </div>
       <div className = {`${view ? view : ''} 
         ${size === 'L' ? 'L_Switch_Font' : ''} 
