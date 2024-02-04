@@ -33,7 +33,7 @@ const TaskPage: FC  = () => {
   <div>
     {isEdit 
       ? <TaskForm
-        
+          task={task}
         /> 
       : <TaskInfo 
           task={task}

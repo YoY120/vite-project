@@ -6,10 +6,11 @@ import { Aling, Display, SizeText, TextFont, TextProps, TextViewType, Weight } f
 
 type TextPageProps = {
   isDarkTheme?: boolean;
+  handleThemeClick?: () => void;
 }
 
 // TODO: сделать переключенгие темной и светлой темы для этой страницы
-const TextPage: FC<TextPageProps> = ({isDarkTheme}) => {
+const TextPage: FC<TextPageProps> = ({isDarkTheme, handleThemeClick}) => {
   const [textProps, setTextProps] = useState<TextProps>({
     font: 'primary',
     lineHeight: 'L',
@@ -23,7 +24,9 @@ const TextPage: FC<TextPageProps> = ({isDarkTheme}) => {
     display: 'block',
     size: 'L',
   })
-  
+
+  console.log('handleThemeClick ', handleThemeClick, 'isDarkTheme ', isDarkTheme)
+
   return (
     <div className='styleBoxButton'>
     <div>
@@ -71,7 +74,7 @@ const TextPage: FC<TextPageProps> = ({isDarkTheme}) => {
           isDarkTheme={isDarkTheme}
           label='светлая / темная тема'
           view='Secondary'
-          onClick={() => {null}}
+          onClick={() => handleThemeClick}
         />
       </div>
 
