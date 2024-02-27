@@ -6,7 +6,7 @@ import Counter from './pages/counter/counter';
 // import { MyCalculate } from './myCalculate/myCalculate';
 import { Calcul } from './calcul/calcul';
 import TaskPage from './pages/TaskPage/TaskPage';
-import TextPage from './pages/storybook/componentsPage/TextPage';
+import TextPage from './pages/storybook/componentsPage/TextPage/TextPage';
 
 type PageTypes = 'storybook' | 'counter' | 'calculate_(Button)' | 'myCalculate_(input)' | 'taskPage'
 
@@ -17,6 +17,7 @@ const App: FC = () => {
 
   const handleThemeClickDark = () => {
     setIsDarkTheme(!isDarkTheme);
+    !isDarkTheme ? document.body.setAttribute('dark', '')  : document.body.removeAttribute('dark')
   }
   
   const renderContent = () => {

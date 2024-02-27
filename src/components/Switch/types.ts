@@ -1,10 +1,11 @@
 import { DetailedHTMLProps } from "react";
 import { Size } from "../../types/size";
+import { ViewType } from "../../types/view";
 
 /**
  * Варианты внешнего вида радио кнопки кнопки
  */
-export type SwitchViewType = 'primary' | 'ghost';
+export type SwitchViewType = ViewType;
 
 /**
  * Варианты размера радио кнопки

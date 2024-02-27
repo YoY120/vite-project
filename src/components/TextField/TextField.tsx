@@ -13,9 +13,11 @@ const TextField: FC<TextFieldProps> = ({
   disabled = false, 
   status = 'default', 
   size = 'L', 
-  onChange = () => {null}
+  onChange = () => {null},
+  isDarkTheme = true,
 }) => {
-  const imputClassNames = `Imput 
+  const imputClassNames = `Imput
+  ${isDarkTheme === true ? 'Imput_dark' : 'Imput_lingt' }
   ${status ? status : ''} 
   ${size}_input 
   ${disabled ? 'disabled' : '' }`;

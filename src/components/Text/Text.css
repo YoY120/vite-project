@@ -1,4 +1,28 @@
 /**
+ * Предопределение цветов для темной темы
+ */
+:root {
+  --var-bgcolor: #e2e2e2;
+  --var-fontcolor: rgba(44, 44, 44, 0.87);
+}
+
+/**
+ * Цвета элеменотов для светлой темы
+ */
+[dark] {
+  --var-bgcolor: #242424;
+  --var-fontcolor: rgba(216, 216, 216, 0.87);
+}
+
+/**
+ *  Цвета
+ */
+body {
+  color: var(--var-fontcolor);
+  background-color: var(--var-bgcolor);
+}
+
+/**
  * базовое оформление текста
  */
 .Text {
@@ -8,11 +32,11 @@
   width:  auto;
   height: auto;
 
-  border: none;  
+  border: none; 
 }
 
 /**
- * Варианты внешнего вида радио кнопки кнопки
+ * Варианты внешнего вида текста
  */
 .alert_TextView {
   color: red;

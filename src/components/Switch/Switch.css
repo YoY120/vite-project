@@ -36,7 +36,7 @@ input .checkbox {
 .checkboxInput {
   padding: 0;
   margin: 0;
-  content: "";
+  /* content: ""; */
   position: absolute;
   border-radius: 50%;
   border: 0px;

@@ -2,23 +2,26 @@ import React, { Component, useState }  from 'react'
 import './storybook.css'
 import Button from '../../components/Button/Button';
 import TextField from '../../components/TextField/TextField';
-import { TextFieldSize, TextFieldStatus } from '../../components/TextField/types';
+import { TextFieldSize } from '../../components/TextField/types';
 import Radio from '../../components/Radio';
 import { RadioSize, RadioViewType } from '../../components/Radio/types';
 import { CheckboxSize, CheckboxViewType } from '../../components/Checkbox/types';
 import Checkbox from '../../components/Checkbox';
 import { SwitchSize, SwitchViewType } from '../../components/Switch/types';
 import Text from '../../components/Text/Text';
-import { Aling, Display, SizeText, TextFont, TextViewType, Weight } from '../../components/Text/types';
+import { Aling, Display, TextFont, TextViewType, Weight } from '../../components/Text/types';
 import Switch from '../../components/Switch/Switch';
-import TextPage from './componentsPage/TextPage';
-import ButtonPage from './componentsPage/ButtonPage';
-import TextFieldPage from './componentsPage/TextFieldPage';
-import RadioPage from './componentsPage/RadioPage';
-import CheckboxPage from './componentsPage/CheckboxPage';
-import SwichPage from './componentsPage/SwichPage';
+import TextPage from './componentsPage/TextPage/TextPage';
+import ButtonPage from './componentsPage/ButtonPage/ButtonPage';
+import TextFieldPage from './componentsPage/TextFieldPage/TextFieldPage';
+import RadioPage from './componentsPage/RadioPage/RadioPage';
+import CheckboxPage from './componentsPage/CheckboxPage/CheckboxPage';
+import SwichPage from './componentsPage/SwichPage/SwichPage';
+import ChipsPage from './componentsPage/ChipsPage/ChipsPage';
+import CollapsePage from './componentsPage/CollapsePage/CollapsePage';
+import TabsPage from './componentsPage/TabsPage/TabsPage';
 
-type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text'; 
+type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs'; 
 
 const Storybook = () => {
   /**
@@ -71,15 +74,28 @@ const Storybook = () => {
        */
       case ('Chips'):
         return (
-          <div className='styleBoxButton'>
-          <div>
-            ХЗ
-          </div>
-        </div>
+          <ChipsPage/>
         );
+      /**
+       * Text
+       */
       case ('Text'):
         return (
           <TextPage/>
+        )
+      /**
+       * Collapse
+       */
+      case ('Collapse'):
+        return (
+          <CollapsePage/>
+        )
+        /**
+         * Tabs
+         */
+      case ('Tabs'):
+        return (
+          <TabsPage/>
         )
     }
   }
@@ -116,6 +132,14 @@ const Storybook = () => {
       <Button
         label='Text'
         onClick={() => setHidden('Text')}
+      />
+      <Button
+        label='Collapse'
+        onClick={() => setHidden('Collapse')}
+      />
+      <Button
+        label='Tabs'
+        onClick={() => setHidden('Tabs')}
       />
     </div>
   )

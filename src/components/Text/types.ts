@@ -5,9 +5,9 @@ import { Size } from "../../types/size";
 // import { Space } from '@consta/uikit/MixSpace';
 
 /**
- * Варианты внешнего вида радио кнопки кнопки
+ * Варианты внешнего вида текста
  */
-export type TextViewType = | 'alert' 
+export type TextViewType = 'alert' 
   | 'brand' 
   | 'ghost' 
   | 'link' 
@@ -16,6 +16,8 @@ export type TextViewType = | 'alert'
   | 'secondary' 
   | 'success' 
   | 'warning';
+
+export  const textViewTypeList: TextViewType[] = ['alert', 'brand', 'ghost', 'link', 'linkMinor', 'primary', 'secondary', 'success', 'warning'];
 
 /**
  *  Гарнитура
@@ -32,35 +34,44 @@ export type Weight = | 'black'
   | 'semibold' 
   | 'thin';
 
+export const weightList: Weight[] = ['black', 'bold', 'light', 'regular', 'semibold', 'thin'];
+
 /**
  *  Выравнивание
  */
 export type Aling = | 'left' | 'center' | 'right';
 
+export const alignList: Aling[] = ['left', 'center', 'right'];
+
 /**
  *  Поведение контейнера с текстом в документе (блочный или строчный элемент)
  */
-export type Display = | 'block' | 'inlineBlock' | 'inline'
+export type Display = | 'block' | 'inlineBlock' | 'inline';
+
+export const displayList: Display[] = ['block', 'inlineBlock', 'inline'];
 
 /**
  * Размер текста
  */
-export type SizeText = | 'sizeText_2XS' 
-  | 'sizeText_XS' 
-  | 'sizeText_S' 
-  | 'sizeText_M' 
-  | 'sizeText_L' 
-  | 'sizeText_XL' 
-  | 'sizeText_2XL' 
-  | 'sizeText_3XL' 
-  | 'sizeText_4XL' 
-  | 'sizeText_5XL' 
-  | 'sizeText_6XL'
+// export type SizeText = | 'sizeText_2XS' 
+//   | 'sizeText_XS' 
+//   | 'sizeText_S' 
+//   | 'sizeText_M' 
+//   | 'sizeText_L' 
+//   | 'sizeText_XL' 
+//   | 'sizeText_2XL' 
+//   | 'sizeText_3XL' 
+//   | 'sizeText_4XL' 
+//   | 'sizeText_5XL' 
+//   | 'sizeText_6XL'
 
 /**
  * Свойство компанента Text
  */
 export type TextProps = {
+  /**
+   * Тема
+   */
   isDarkTheme?: boolean;
   /**
    * Текст

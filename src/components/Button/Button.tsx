@@ -13,11 +13,12 @@ const Button: FC<ButtonProps> = ({
   view = 'Primary',
   size = 'L',
   onClick = () => {null},
+  isDarkTheme = true,
 }) => {
   const buttonClassNames = `Button 
   ${className} 
   ${size}_button
-  ${view ? view : ''} 
+  ${isDarkTheme ? `${view}_Dark` : `${view}_light`} 
   ${disabled ? 'disabled' : '' } 
   ${loading ? 'loading' : ''}`;
 

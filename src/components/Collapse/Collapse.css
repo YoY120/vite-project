@@ -1,0 +1,103 @@
+/**
+ * Основной класс
+ */
+.Collapse {
+  display: flex;
+
+  background-color: none;
+  border: none;
+
+  color: black;
+}
+/**
+ * Форма компонента
+ */
+.default::after {
+  background-color: rgba(128, 128, 128, 0.479);
+}
+
+.brick::after {
+  background-color: rgba(128, 128, 128, 0.479);
+  border-radius: 5px;
+}
+
+.round::after {
+  background-color: rgba(128, 128, 128, 0.479);
+  border-radius: 30px;
+}
+
+/**
+ * Цвета Collapse
+ */
+.Primary {
+  background-color:  #358C00;
+  color: #020202;
+}
+
+.Secondary {
+  background: rgba(48, 48, 48, 0.863);
+  color: rgb(85, 170, 34);
+}
+
+.Ghost {
+  background: rgba(18, 18, 18, 0.00);
+  color: rgb(0, 0, 0);
+}
+
+.Clear {
+  background: rgba(18, 18, 18, 0.00);
+}
+/**
+ * Размер Collapse
+ */
+.L_Collapse{
+  min-height: 48px;
+  padding: 0 20px;
+  min-width: 134px;
+  font-size: 18px;
+}
+
+.M_Collapse {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  min-width: 111px;
+}
+
+.S_Collapse {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+  min-width: 87px;
+}
+
+.XS_Collapse {
+  min-height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+  min-width: 79px;
+}
+/**
+ * Разделитель между заголовком и содержимым
+ */
+.divider {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.616);
+}
+/**
+ * боковые отступы
+ */
+.L_HorizontalSpace {
+  padding-left: 100px;
+}
+
+.M_HorizontalSpace {
+  padding-left: 50px;
+}
+
+.S_HorizontalSpace {
+  padding-left: 15px;
+}
+
+.XS_HorizontalSpace {
+  padding-left: 5px;
+}

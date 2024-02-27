@@ -1,9 +1,11 @@
-import { FieldStatus, Size } from "../../types/size";
+import { Size } from "../../types/size";
 
 /**
  * Стили поля для ввода
  */
-export type TextFieldStatus = FieldStatus;
+export type FieldStatus = 'default' | 'success' | 'warning' | 'alert';
+
+export const fieldStatusList: FieldStatus[] = ['default', 'success', 'warning', 'alert'];
 
 /**
  * Размер поля для ввода
@@ -19,6 +21,10 @@ export type TextFiledLabelPosition = 'Top' | 'Left';
  * Свойсва компонента TextField
  */
 export type TextFieldProps = {
+  /**
+   * Светлая.темная тема
+   */
+  isDarkTheme?: boolean;
   /**
    * Заголовок поля ввода
    */
@@ -42,7 +48,7 @@ export type TextFieldProps = {
   /**
    * Стили поля для ввода
    */
-  status?: TextFieldStatus;
+  status?: FieldStatus;
   /**
    * Размер полея для ввода
    */

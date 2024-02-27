@@ -1,44 +1,78 @@
+:root {
+  --var-bgcolor-button-primary: #358C00;
+  --var-bgcolor-button-secondary: rgba(250, 250, 250, 0.15);
+  --var-bgcolor-button-ghost: rgba(18, 18, 18, 0.00);
+
+  --varfontcolor-button-primary: #FAFAFA;
+  --varfontcolor-button-secondary: rgb(85, 170, 34);
+  --varfontcolor-button-ghost: #FAFAFA;
+}
+
+/**
+ * Основной стиль кнопки
+ */
 .Button {
-  /* --control-primary-bg-bg: #358C00;
-
-  --radius-l: 12px;
-  --button-height: 48px;
-  --button-padding: 0 20px;
-  --button-gap: 8px;
-  --control-primary-typo-text: #FAFAFA;
-  --control-ghost-border-border: rgba(75, 75, 75, 0.80); */
-
   display: flex;
   justify-content: center;
   align-items: center;
 
   border-radius: 12px;
-
-  color: #FAFAFA;
 }
 
+/**
+ * Цвет выбранной кнопки
+ */
 .Button:hover {
   background-color: #296801;
 }
 
-.Primary {
+/**
+ * Цвета кнопки темной темы
+ */
+.Primary_Dark {
   background-color:  #358C00;
+  color: #FAFAFA;
 }
 
-.Secondary {
+.Secondary_Dark {
   background: rgba(250, 250, 250, 0.15);
   color: rgb(85, 170, 34);
 }
 
-.Ghost {
+.Ghost_Dark {
   border: 1px solid rgba(75, 75, 75, 0.80);
   background: rgba(18, 18, 18, 0.00);
 }
 
+/**
+ * Цвета кнопки светлой темы
+ */
+.Primary_light {
+  background-color:  #358C00;
+  color: #020202;
+}
+
+.Secondary_light {
+  background: rgba(48, 48, 48, 0.863);
+  color: rgb(85, 170, 34);
+}
+
+.Ghost_light {
+  border: 1px solid rgba(75, 75, 75, 0.80);
+  background: rgba(18, 18, 18, 0.00);
+  color: rgb(0, 0, 0);
+}
+
+/**
+ * Не знаю что :\
+ */
 .Clear {
   background: rgba(18, 18, 18, 0.00);
 }
 
+/**
+ * Размер кнопок
+ */
 .L_button {
   min-height: 48px;
   padding: 0 20px;
@@ -67,6 +101,9 @@
   min-width: 79px;
 }
 
+/**
+ * Блокировка кнопки
+ */
 .disabled {
   background-color: #FAFAFA26;
 }
@@ -75,6 +112,9 @@
   background-color: #FAFAFA35;
 }
 
+/**
+ * Режим загрузки
+ */
 .loading {
   background-color: red;
 }
