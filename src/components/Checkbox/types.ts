@@ -1,10 +1,11 @@
 import { DetailedHTMLProps } from "react";
 import { Size } from "../../types/size";
+import { ViewType } from "../../types/view";
 
 /**
  * Варианты внешнего вида радио кнопки кнопки
  */
-export type CheckboxViewType = 'primary' | 'ghost';
+export type CheckboxViewType = ViewType;
 
 /**
  * Варианты размера радио кнопки

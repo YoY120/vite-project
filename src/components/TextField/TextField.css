@@ -11,6 +11,17 @@
 }
 
 /**
+ * Темная/светлая тема
+ */
+.Imput_dark {
+  color: white;
+}
+
+.Imput_lingt {
+  color: black;
+}
+
+/**
  * Стандарный стиль
  */
 .default {

@@ -5,10 +5,13 @@ import { Size } from "../../types/size";
  */
 export type ButtonViewType = 'Primary' | 'Secondary' | 'Ghost' | 'Clear';
 
+export const buttonViewTypeList: ButtonViewType[] = ['Primary', 'Secondary', 'Ghost', 'Clear']
+
 /**
  * Варианты размера кнопки
  */
 export type TextFieldSize = Size;
+
 
 /**
  * Свойство компанента Button

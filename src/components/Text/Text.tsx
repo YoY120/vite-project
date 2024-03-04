@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import './Text.css';
 import { TextProps } from "./types";
+// import '../../index.css'
+
 
 /**
  * Типизация Checkbox кнопки
@@ -19,6 +21,7 @@ const Text: FC<TextProps> = ({
   align = 'center',
   display = 'block',
   size = 'L',
+  isDarkTheme = true,
   // space = '|',
 }) => {
   const TextClassName = `Text

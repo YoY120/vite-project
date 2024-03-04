@@ -1,59 +1,49 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { Size } from "../../types/size";
+import React from 'react'
 
-/**
- * Варианты внешнего вида радио кнопки кнопки
+/** 
+ * Статус
  */
-export type ChipsViewType = 'primary' | 'secondary';
+export type ChipsPropStatus = 'normal' | 'system' | 'success' | 'warning' | 'error';
+
+export const chipsStatusList: ChipsPropStatus[] = ['normal', 'system', 'success', 'warning', 'error']
 
 /**
  * Варианты размера радио кнопки
  */
-export type ChipsSize = 'L_Chips' | 'M_Chips' | 'S_Chips' | 'XS_Chips';
+export type ChipsSize = Size;
 
 /**
- * Свойство компанента Radio
+ * Типы групп кнопок
  */
-export type ChipsProps = {
+export type ChipsProps = { 
   /**
-   *  Содержимое кнопки
+   * Расположение иконка слева
    */
-  item?: {
-    /**
-    * Текст кнопки
-    */
-    label?: string,
-    /**
-     *  Статус кнопки
-     */
-    // status?: string;
-    /**
-     *  Статус активности
-     */
-    active?: boolean
-  }
-
+  iconLeft?: React.ReactNode;
   /**
-   *  Свойство активности кнопки
+   * Расположение Иконка справа
    */
-  // interactive?: boolean;
-
+  iconRight?: React.ReactNode;
   /**
-   *  Вид кнопки
+   * Текст кнопки
    */
-  activeView?: ChipsViewType;
-
+  label?: string;
   /**
-   *  Размер кнопки
+   * Статус кнопки
    */
-  size_Chips?: ChipsSize;
-
+  status?: ChipsPropStatus;
   /**
-   *  Обработчик нажатия
+   * Вид активного элемента
    */
-  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-
+  isActive?: boolean;
   /**
-   *  Событие клика по элементу
+   * Размер конопки
    */
-  // onItemClick?: () => ChipsPropOnItemClick;
-}
+  size?: ChipsSize;
+  /**
+  *  Обработчик нажатия
+  */
+  onClick?: () => void;
+};

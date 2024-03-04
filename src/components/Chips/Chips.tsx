@@ -1,28 +1,25 @@
 import React, { FC } from "react";
 import './Chips.css';
-import { ChipsProps } from "./types";
+import { ChipsProps } from "./types"; 
+import classNames from "classnames";
 
 /**
- * Типизация Checkbox кнопки
+ * Типы кнопок
  */
 const Chips: FC<ChipsProps> = ({
-  item = {label: 'label', active: true},
-  // interactive = true,
-  activeView = 'primary',
-  size_Chips = 'L_Chips',
-  onClick = () => null,
+  status = 'normal',
+  label = '',
+  isActive = true,
+  size = 'M',
+  onClick = () => (null), 
 }) => {
-  const ChipsClassName = `Chips 
-    ${activeView ? activeView : ''} 
-    ${size_Chips ? size_Chips : ''}
-    ${item.active ? item.active : ''}`;
 
   return (
     <div>
       <button
-        className = {ChipsClassName}
+        className = {classNames('Chips', isActive && 'isActive' , size && `size_${size}`, status && `status_${status}`)}
         onClick = {onClick}>
-          {item.label}
+          {label}
       </button>
     </div>
   )
