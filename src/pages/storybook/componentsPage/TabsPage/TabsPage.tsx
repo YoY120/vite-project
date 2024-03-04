@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import { TabsProps } from "../../../../components/Tabs/type";
 import Button from "../../../../components/Button/Button";
 import Tabs from "../../../../components/Tabs/Tabs";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import TabsPageSize from "./TabsPageSize/TabsPageSize";
 import TabsPageLinePosition from "./TabsPagelinePosition/TabsPageLinePosition";
 

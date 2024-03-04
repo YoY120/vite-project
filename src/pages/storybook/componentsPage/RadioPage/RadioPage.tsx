@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { RadioProps } from "../../../../components/Radio/types";
 import Radio from "../../../../components/Radio";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import Button from "../../../../components/Button/Button";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
 import { sizeList } from "../../../../types/size";
@@ -20,7 +20,7 @@ const RadioPage: FC<RadioProps> = () => {
 
   return (
     <div className='styleBoxButton'>
-      <div>
+      <div className="styleBox">
         <Radio
           {...radioProps}
         />

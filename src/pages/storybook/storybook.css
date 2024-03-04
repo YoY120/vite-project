@@ -12,9 +12,18 @@
 .styleBoxButton {
   display: flex;
   flex-direction: row;
-  align-items: center;  
+  align-items: center;
+
+  /* max-width: 1280px; */
 
   gap: 10px;
+}
+
+.styleBox {
+  display: flex;
+  justify-content: center;
+
+  min-width: 400px;
 }
 
 .styleBlockInput {
@@ -28,6 +37,12 @@
 .styleBoxMenu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  max-width: 880px;
+
+  align-content: flex-start;
+  overflow: auto;
 
   border-left: 2px solid white;
 
@@ -45,6 +60,15 @@
 .styleButtonMenu {
   display: flex;
   flex-direction: row;
+
+  gap: 10px;
+}
+
+.navigation {
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-evenly;
 
   gap: 10px;
 }

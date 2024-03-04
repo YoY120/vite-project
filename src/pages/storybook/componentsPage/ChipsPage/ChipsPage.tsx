@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { ChipsProps } from "../../../../components/Chips/types";
 import Chips from "../../../../components/Chips/Chips";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import Button from "../../../../components/Button/Button";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
 import { sizeList } from "../../../../types/size";

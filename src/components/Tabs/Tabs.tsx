@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { TabsProps } from "./type";
+import './Tabs.css';
 import classNames from "classnames";
 
 const Tabs: FC<TabsProps> = ({

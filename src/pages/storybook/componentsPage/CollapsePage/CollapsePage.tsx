@@ -2,14 +2,14 @@ import React, { FC, useState} from "react";
 import { CollapseProps } from "../../../../components/Collapse/type";
 import Button from "../../../../components/Button/Button";
 import Collapse from "../../../../components/Collapse/Collapse";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
 import { sizeList } from "../../../../types/size";
 import StorybookViewFullComponent from "../../../../components/StorybookViewComponent/StorybookViewFullComponent/StorybookViewFullComponent";
 import { ViewFullList } from "../../../../types/view";
 import ButtonPageForm from "./CollapsePageForm/CollapsePageForm";
 
-const CollapsePageL: FC<CollapseProps> = () => {
+export const CollapsePage: FC<CollapseProps> = () => {
   const [collapseProps, setCollapseProps] = useState<CollapseProps>({
     label: '',
     size: 'M',
@@ -17,7 +17,6 @@ const CollapsePageL: FC<CollapseProps> = () => {
     view: 'primary',
     divider: false,
     horizontalSpace: 'S',
-    children: '',
     isOpen: false,
   });
 
@@ -26,7 +25,12 @@ const CollapsePageL: FC<CollapseProps> = () => {
       <div className="styleBox">
         <Collapse
           {...collapseProps}
-        />
+        >
+          <div>fdsdfs</div>
+          <div>dfsdfs</div>
+          <div>dfdfs</div>
+          <div>sdfdfs</div>
+        </Collapse>
       </div>
       <div className='styleBoxMenu'>
         <div className='styleButtonMenu'>
@@ -77,5 +81,3 @@ const CollapsePageL: FC<CollapseProps> = () => {
     </div>
   )
 }
-
-export default CollapsePageL;

@@ -6,7 +6,7 @@ import './TextField.css'
  * Текстовое поле ввода
  */
 const TextField: FC<TextFieldProps> = ({
-  label = '', 
+  label, 
   labelPosition = 'Top',
   caption = '',
   placeholder = '', 
@@ -19,7 +19,7 @@ const TextField: FC<TextFieldProps> = ({
   const imputClassNames = `Imput
   ${isDarkTheme === true ? 'Imput_dark' : 'Imput_lingt' }
   ${status ? status : ''} 
-  ${size}_input 
+  ${size}_input
   ${disabled ? 'disabled' : '' }`;
 
   return (

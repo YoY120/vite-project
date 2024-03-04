@@ -1,7 +1,7 @@
 import React, { Component, useState }  from 'react'
 import './storybook.css'
 import Button from '../../components/Button/Button';
-import TextField from '../../components/TextField/TextField';
+import TextField from '../../components/TextField';
 import { TextFieldSize } from '../../components/TextField/types';
 import Radio from '../../components/Radio';
 import { RadioSize, RadioViewType } from '../../components/Radio/types';
@@ -18,16 +18,26 @@ import RadioPage from './componentsPage/RadioPage/RadioPage';
 import CheckboxPage from './componentsPage/CheckboxPage/CheckboxPage';
 import SwichPage from './componentsPage/SwichPage/SwichPage';
 import ChipsPage from './componentsPage/ChipsPage/ChipsPage';
-import CollapsePage from './componentsPage/CollapsePage/CollapsePage';
+import {CollapsePage} from './componentsPage/CollapsePage/CollapsePage';
 import TabsPage from './componentsPage/TabsPage/TabsPage';
+import Collapse from '../../components/Collapse';
+import ChoiseGroup from '../../components/ChoiseGroup';
 
 type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs'; 
 
-const Storybook = () => {
+const choiseList: string[] = [
+  'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips', 'Text', 'Collapse', 'Tabs'
+]
+
+export const Storybook = () => {
   /**
    *  Переключение компонентов
    */
   const [hidden, setHidden] = useState<WindowTypeButton>('Button');
+
+  const [isOpenCollapse, setIsOpenCollapse] = useState(false);
+
+  const [keyChose, setKeyChose] = useState<string | null>(null);
 
 //  --------------------------------------------------------------------------------------------
 
@@ -46,7 +56,7 @@ const Storybook = () => {
        */
       case ('Input'): 
         return (
-          <TextFieldPage/>
+          <TextFieldPage label=''/>
         )
       /**
        * Кнопка RADIO 
@@ -88,7 +98,7 @@ const Storybook = () => {
        */
       case ('Collapse'):
         return (
-          <CollapsePage/>
+          <CollapsePage label=''/>
         )
         /**
          * Tabs
@@ -151,8 +161,21 @@ const Storybook = () => {
     <>
       {renderInternalMenu()}
       {renderInternalContent()}
+      <Collapse
+        label='Тестовый колапс'
+        isOpen={isOpenCollapse}
+        onClick={() => setIsOpenCollapse(!isOpenCollapse)}
+      >
+        <div>
+          <div>dfgdfsg</div>
+          <div>fghnjfkdsg</div>
+        </div>
+      </Collapse>
+      <ChoiseGroup
+        list={choiseList}
+        selectedItem={keyChose}
+        onClick={(key) => setKeyChose(keyChose === key ? null : key)}
+      />
     </>
   )
 }
-
-export default Storybook;

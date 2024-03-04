@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import { CollapseProps } from "./type";
 import classNames from "classnames";
 import Text from "../Text/Text";
+import './Collapse.css';
 
 const Collapse: FC<CollapseProps> = ({
   label = '',
@@ -20,18 +21,17 @@ const Collapse: FC<CollapseProps> = ({
       <button 
         className = {classNames(
           'Collapse',
-          size && `${size}_Collapse`, 
-          form && `${form}`, 
-          view && `${view}`, 
-          divider && 'divider', 
-          horizontalSpace && `${horizontalSpace}_HorizontalSpace`,
+          size && `collapseSize_${size}`, 
+          form && `collapseForm_${form}`, 
+          view && `collapseView_${view}`, 
+          divider && 'collapseDivider', 
+          horizontalSpace && `collapseHorisontalSpace_${horizontalSpace}`,
           className,
           )}
           onClick={onClick}>
         {label}
       </button>
-      {/* {isOpen && <Text label={String({children})}/>} */}
-      {isOpen && <div>{children}</div>}
+      {isOpen && children}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { TextFieldProps } from "../../../../components/TextField/types";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import Button from "../../../../components/Button/Button";
 import TextFieldPageStatus from "./TextFieldPageStatus/TextFieldPageStatus";
 import TextFieldInput from "./TextFieldPageInput/TextFieldPageInput";

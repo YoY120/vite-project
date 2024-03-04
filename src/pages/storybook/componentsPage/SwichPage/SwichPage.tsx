@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import Switch from "../../../../components/Switch/Switch";
 import { SwitchProps } from "../../../../components/Switch/types";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import Button from "../../../../components/Button/Button";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
 import { sizeList } from "../../../../types/size";
@@ -19,11 +19,11 @@ const SwichPage: FC<SwitchProps> = () => {
 
   return (
     <div className='styleBoxButton'>
-    <div>
-      <Switch
-        {...swichProps}
-      />
-    </div>
+      <div className="styleBox">
+        <Switch
+          {...swichProps}
+        />
+      </div>
     <div className='styleBoxMenu'>
       <div className='styleButtonMenu'>
         <TextField

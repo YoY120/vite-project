@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import Checkbox from "../../../../components/Checkbox";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import Button from "../../../../components/Button/Button";
 import { CheckboxProps } from "../../../../components/Checkbox/types";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
@@ -20,7 +20,7 @@ const CheckboxPage: FC<CheckboxProps> = () => {
 
   return (
     <div className='styleBoxButton'>
-      <div>
+      <div className="styleBox">
         <Checkbox
           {...checkboxProps}
         />

@@ -1,6 +1,5 @@
- import React, { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import Text from "../../../../components/Text/Text";
-import TextField from "../../../../components/TextField/TextField";
 import Button from "../../../../components/Button/Button";
 import { Aling, Display, TextFont, TextProps, TextViewType, Weight } from "../../../../components/Text/types";
 import TextPageSize from "./TextPageSize/TextPageSize";
@@ -13,6 +12,7 @@ import TextPageSpacing from "./TextPageSize/TextPageSpacing";
 import TextPageLineHeight from "./TextPageSize/TextPageLineHeight";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
 import { sizeList } from "../../../../types/size";
+import TextField from "../../../../components/TextField";
 
 type TextPageProps = {
   isDarkTheme?: boolean;
@@ -51,12 +51,12 @@ const TextPage: FC<TextPageProps> = ({isDarkTheme, handleThemeClick}) => {
 
   return (
     <div className='styleBoxButton'>
-    <div>
-      <Text
-        isDarkTheme={isDarkTheme}
-        {...textProps}
-      />
-    </div>
+      <div className="styleBox">
+        <Text
+          isDarkTheme={isDarkTheme}
+          {...textProps}
+        />
+      </div>
     
     <div className='styleBoxMenu'>
       <div className='styleButtonMenu'>

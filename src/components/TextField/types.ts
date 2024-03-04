@@ -28,7 +28,7 @@ export type TextFieldProps = {
   /**
    * Заголовок поля ввода
    */
-  label?: string;
+  label: string;
   /**
    * Расположение Label
    */

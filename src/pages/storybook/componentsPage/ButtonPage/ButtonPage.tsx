@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import TextField from "../../../../components/TextField/TextField";
+import TextField from "../../../../components/TextField";
 import Button from "../../../../components/Button/Button";
 import { ButtonProps } from "../../../../components/Button/types";
 import ButtonPageView from "./ButtonPageView/ButtonPageView";
@@ -88,25 +88,23 @@ const ButtonPage: FC<ButtonProps> = () => {
               view='Secondary'
             />
           </div>
-          <div className='styleButtonMenu'>
-            {/**
-             * Вид кнопки
-             */}
-            <ButtonPageView
-              view={buttonProps.view}
-              onViewClick={(view) => (setButtonProps({...buttonProps, view}))}
-            />
-            {/**
-             * Размер кнопки
-            */}
-            <StorybookSizeComponent
-              label="Размер кнопки"
-              buttonLabel='Размер'
-              list={sizeList}
-              selectedSize={buttonProps.size}
-              onSizeClick={(size) => (setButtonProps({...buttonProps, size}))}
-            />
-          </div>
+          {/**
+           * Вид кнопки
+           */}
+          <ButtonPageView
+            view={buttonProps.view}
+            onViewClick={(view) => (setButtonProps({...buttonProps, view}))}
+          />
+          {/**
+           * Размер кнопки
+          */}
+          <StorybookSizeComponent
+            label="Размер кнопки"
+            buttonLabel='Размер'
+            list={sizeList}
+            selectedSize={buttonProps.size}
+            onSizeClick={(size) => (setButtonProps({...buttonProps, size}))}
+          />
         </div>
       </div>
   )
