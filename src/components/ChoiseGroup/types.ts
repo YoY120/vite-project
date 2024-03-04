@@ -27,9 +27,13 @@ export type ChoiseGroupProps = {
    */
   form?: FormChoiseGroup;
   /**
-   * Неактивная кнопка
+   * Неактивный кнопки
    */
   disabled?: boolean;
+  /**
+   * Неактивная кнопка
+   */
+  disabledItem?: boolean;
   /**
    * Обработчик нажатия
    * key - выбранный элемент
