@@ -4,99 +4,112 @@
 .Collapse {
   display: flex;
 
-  background-color: none;
+  align-items: center;
+
+  background-color: #02020200;
   border: none;
 
-  color: black;
+  max-width: 200px;
+  padding: 10px 0px;
+
+  color: rgb(255, 255, 255);
+}
+
+/* .Collapse:focus {
+  border: 0px solid;
+} */
+/**
+ * Класс Children
+ */
+.children_Collapse {
+  padding: 10px 0px;
+  max-width: 400px;
 }
 /**
  * Форма компонента
  */
-.default::after {
+.collapseForm_default::after {
   background-color: rgba(128, 128, 128, 0.479);
 }
 
-.brick::after {
+.collapseForm_brick::after {
   background-color: rgba(128, 128, 128, 0.479);
   border-radius: 5px;
 }
 
-.round::after {
+.collapseForm_round::after {
   background-color: rgba(128, 128, 128, 0.479);
   border-radius: 30px;
 }
 /**
  * Цвета Collapse
  */
-.Primary {
+.collapseView_Primary {
   background-color:  #358C00;
   color: #020202;
 }
 
-.Secondary {
+.collapseView_Secondary {
   background: rgba(48, 48, 48, 0.863);
   color: rgb(85, 170, 34);
 }
 
-.Ghost {
+.collapseView_Ghost {
   background: rgba(18, 18, 18, 0.00);
   color: rgb(0, 0, 0);
 }
 
-.Clear {
+.collapseView_Clear {
   background: rgba(18, 18, 18, 0.00);
 }
 /**
  * Размер Collapse
  */
-.L_Collapse{
+.collapseSize_L {
   min-height: 48px;
-  padding: 0 20px;
   min-width: 134px;
   font-size: 18px;
 }
 
-.M_Collapse {
+.collapseSize_M {
   min-height: 40px;
-  padding: 0 16px;
   font-size: 16px;
   min-width: 111px;
 }
 
-.S_Collapse {
+.collapseSize_S {
   min-height: 32px;
-  padding: 0 12px;
   font-size: 14px;
   min-width: 87px;
 }
 
-.XS_Collapse {
+.collapseSize_XS {
   min-height: 24px;
-  padding: 0 8px;
   font-size: 12px;
   min-width: 79px;
 }
 /**
  * Разделитель между заголовком и содержимым
  */
-.divider {
+.collapseDivider {
   border-bottom: 1px solid rgba(128, 128, 128, 0.616);
+  border-radius: 0;
 }
 /**
  * боковые отступы
  */
-.L_HorizontalSpace {
+.collapseHorisontalSpace_L {
   padding-left: 100px;
 }
 
-.M_HorizontalSpace {
+.collapseHorisontalSpace_M {
   padding-left: 50px;
 }
 
-.S_HorizontalSpace {
+.collapseHorisontalSpace_S {
   padding-left: 15px;
 }
 
-.XS_HorizontalSpace {
+.collapseHorisontalSpace_XS {
   padding-left: 5px;
 }

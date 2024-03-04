@@ -1,10 +1,15 @@
+/**
+ * Класс label
+ */
 .labelRadio {
   display: flex;
   flex-direction: row;
 
   gap: 10px;
 }
-
+/**
+ * Соновой класс
+ */
 .Radio {
   display: flex;
 
@@ -13,27 +18,31 @@
 
   margin: 0px;
 }
-
-.primary {
+/**
+ * Внешний вид
+ */
+.primary_Radio {
   color-scheme: white;
   color: white
 }
 
-.primary:hover {
+.primary_Radio:hover {
   color-scheme: blue;
   color: blue;
 }
 
-.ghost {
+.ghost_Radio {
   color-scheme: rgba(128, 128, 128, 0.486);
   color:  rgba(128, 128, 128, 0.486);
 }
 
-.ghost:hover {
+.ghost_Radio:hover {
   color-scheme: rgba(128, 128, 128, 0.486);
   color:  rgba(128, 128, 128, 0.486);
 }
-
+/**
+ * Размер
+ */
 .L_Radio {
   width: 15px;
 }

@@ -8,81 +8,81 @@
 
   color: white;
 
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
+  border-radius: 0px;
 }
-
 
 /**
  * Внешний вид компонента (с рамкой или без) (VIEW)
  */
-.bordered {
+.bordered_TabsView {
+  border-bottom: 0px solid gray;
+}
+/**
+ * Расположение табов
+ */
+.bottom_TabsLinePosition {
   border-bottom: 1px solid gray;
 }
 
-.clear {
-  border-bottom: none;
+.top_TabsLinePosition {
+  border-top: 1px solid gray;
+}
+
+.left_TabsLinePosition {
+  border-left: 1px solid gray;
+}
+
+.right_TabsLinePosition {
+  border-right: 1px solid gray;
+}
+/**
+ * При выборе
+ */
+.bottom_TabsLinePosition:active {
+  border-bottom: 2px solid blue;
+}
+
+.top_TabsLinePosition:active {
+  border-top: 2px solid blue;
+}
+
+.left_TabsLinePosition:active {
+  border-left: 2px solid blue;
+}
+
+.right_TabsLinePosition:active {
+  border-right: 2px solid blue;
+}
+
+.clear_TabsView {
+  border: 0px solid;
 }
 /**
  * Размер компонента (SIZE)
  */
-.M_Tabs {
+.M_TabsSize {
   min-height: 40px;
   padding: 0 16px;
   font-size: 16px;
   min-width: 111px;
 }
 
-.S_Tabs {
+.S_TabsSize {
   min-height: 32px;
   padding: 0 12px;
   font-size: 14px;
   min-width: 87px;
 }
 
-.XS_Tabs {
+.XS_TabsSize {
   min-height: 24px;
   padding: 0 8px;
   font-size: 12px;
   min-width: 79px;
 }
-/**
- * Расположение табов
- */
-.bottom_Tabs {
-  border-bottom: 1px solid gray;
-}
 
-.top__Tabs {
-  border-top: 1px solid gray;
-}
-
-.left__Tabs {
-  border-left: 1px solid gray;
-}
-
-.right__Tabs {
-  border-right: 1px solid gray;
-}
-/**
- * При выборе
- */
-.bottom_Tabs:hover {
-  border-bottom: 2px solid blue;
-}
-
-.top__Tabs:hover {
-  border-top: 2px solid blue;
-}
-
-.left__Tabs:hover {
-  border-left: 2px solid blue;
-}
-
-.right__Tabs:hover {
-  border-right: 2px solid blue;
-}
-
-.disabled {
+.disabled_Tabs {
   color: gray;
 }

@@ -14,7 +14,7 @@ const Radio: FC<RadioProps> = ({
   onChange = () => null,
 }) => {
   const radioClassName = `Radio 
-  ${view ? view : ''} 
+  ${view ? `${view}_Radio` : ''} 
   ${size}_Radio`;
 
   return (
@@ -28,7 +28,7 @@ const Radio: FC<RadioProps> = ({
           type="radio"
         />
         <span className={`
-          ${view ? view : ''} 
+          ${view ? `${view}_Radio` : ''} 
           ${size === 'L' ? 'L_Font' : ''} 
           ${size === 'M' ? 'M_Font' : ''} 
           ${size === 'S' ? 'S_Font' : ''} 

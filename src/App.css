@@ -41,4 +41,17 @@
   color: #888;
 }
 
+.navigation {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  gap: 10px;
+
+  border-bottom: 3px solid black;
+}
+
 

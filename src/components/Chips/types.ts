@@ -19,6 +19,10 @@ export type ChipsSize = Size;
  */
 export type ChipsProps = { 
   /**
+   * Массив
+   */
+  Chipslist: string[];
+  /**
    * Расположение иконка слева
    */
   iconLeft?: React.ReactNode;
@@ -45,5 +49,5 @@ export type ChipsProps = {
   /**
   *  Обработчик нажатия
   */
-  onClick?: () => void;
+  onClick?: (key: string) => void;
 };

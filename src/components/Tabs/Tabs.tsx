@@ -18,12 +18,13 @@ const Tabs: FC<TabsProps> = ({
       <button 
         className={classNames(
           'Tabs',
-          size && `${size}_Tabs`,
-          view && `${view}`,
-          linePosition && `${linePosition}_Tabs`,
+          size && `${size}_TabsSize`,
+          view && `${view}_TabsView`,
+          linePosition && `${linePosition}_TabsLinePosition`,
+          disabled && 'disabled_Tabs',
           className,
         )}
-        disabled= {disabled}
+        disabled={disabled}
         onChange={onChange}
         onClick={onClick}>
         {label}

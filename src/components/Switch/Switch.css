@@ -1,13 +1,14 @@
-
+/**
+ * Основной клсса
+ */
 .switchContainer {
   display: flex;
   align-items: center;
 
   gap: 10px;
 }
-
 /* 
-* Взято с сайта
+* Переклбчение swich
 */
 input .checkbox {
   display: none;
@@ -36,7 +37,6 @@ input .checkbox {
 .checkboxInput {
   padding: 0;
   margin: 0;
-  /* content: ""; */
   position: absolute;
   border-radius: 50%;
   border: 0px;
@@ -45,7 +45,6 @@ input .checkbox {
   transition-duration: .2s;
 }
 
-/* .toggleSwitch::after */
 .checkboxInput_befo {
   background-color: rgb(0, 0, 0);
   left: 1px;
@@ -55,109 +54,151 @@ input .checkbox {
   background-color: rgb(255, 255, 255);
   left: 20px;
 }
+/**
+ * Стилизация swich
+ */
+.primary_SwichToggleBefo {
+  background-color: rgb(255, 255, 255);
+}
 
-/* #checkboxInput:checked + .toggleSwitch::after {
-  transform: translateX(100%);
-  transition-duration: .2s;
-  border: 10px solid rgb(255, 255, 255);
-} */
+.primary_SwichToggleAfter {
+  background-color: rgb(0, 112, 37);
+}
 
-/* Switch background change */
-/* #checkboxInput:checked + .toggleSwitch {
-  background-color: rgb(4, 124, 0);
-  transition-duration: .2s;
-} */
+.primary_SwichBoxBefo {
+  background-color: rgb(255, 255, 255);
+}
+
+.primary_SwichBoxBefo {
+  background-color: rgb(0, 112, 37);
+}
+/* -------------------------------------------- */
+.ghost_SwichToggleBefo {
+  background-color: rgb(255, 255, 255);
+}
+
+.ghost_SwichToggleAfter{
+  background-color: rgb(0, 0, 0);
+}
+
+.ghost_SwichBoxBefo {
+  background-color: rgb(0, 0, 0);
+}
+
+.ghost_SwichBoxAfter {
+  background-color: rgb(255, 255, 255);
+}
 
 /* ------------------------------------------- */
 
-/* .primary_toggleSwitch {
-  background-color: rgb(255, 255, 255)
-}
-
-.primary_toggleSwitch::after {
-  border: 10px solid rgb(0, 0, 0);
-}
-
-.checkboxInput:checked + .primary_toggleSwitch::after {
-  transform: translateX(100%);
-  transition-duration: .2s;
-  border: 10px solid rgb(255, 255, 255);
-}
-
-.checkboxInput:checked + .primary_toggleSwitch {
-  background-color: rgb(4, 124, 0);
-  transition-duration: .2s;
-}
-
-.ghost_toggleSwitch {
-  background-color: rgb(102, 102, 102)
-}
-
-.ghost_toggleSwitch::after {
-  border: 10px solid rgb(255, 255, 255);
-}
-
-.checkboxInput:checked + .ghost_toggleSwitch::after {
-  transform: translateX(100%);
-  transition-duration: .2s;
-  border: 10px solid rgb(0, 129, 39);
-}
-
-.checkboxInput:checked + .ghost_toggleSwitch {
-  background-color: rgb(43, 0, 124);
-  transition-duration: .2s;
-} */
-
-/* ------------------------------------------- */
-
-.primary {
+.primary_Swich {
   color-scheme: white;
   color: white
 }
 
-.primary:hover {
+.primary_Swich:hover {
   color-scheme: blue;
   color: blue;
 }
 
-.ghost {
+.ghost_Swich {
   color-scheme: rgba(128, 128, 128, 0.486);
   color:  rgba(128, 128, 128, 0.486);
 }
 
-.ghost:hover {
+.ghost_Swich:hover {
   color-scheme: rgba(128, 128, 128, 0.486);
   color:  rgba(128, 128, 128, 0.486);
 }
-
-.L_Switch {
-  min-width: 15px;
-}
-
+/**
+ * Размер для текста
+ */
 .L_Switch_Font {
   font-size: 18px;
-}
-
-.M_Switch {
-  min-width: 13px;
 }
 
 .M_Switch_Font {
   font-size: 16px;
 }
 
-.S_Switch {
-  min-width: 10px;
-}
-
 .S_Switch_Font {
   font-size: 14px;
 }
 
-.XS_Switch {
-  min-width: 6px;
-}
-
 .XS_Switch_Font{
   font-size: 12px;
+}
+/**
+ * Размер swich
+ */
+.L_SwichToggle {
+  width: 55px;
+  height: 35px;
+}
+
+.L_SwichBox  {
+  height: 30px;
+  width: 30px;
+}
+
+.L_SwichBoxBefo {
+  left: 1px;
+}
+
+.L_SwichBoxAfter{
+  left: 20px;
+}
+/* ------------------------------------------- */
+.M_SwichTogle {
+  width: 50px;
+  height: 30px;
+}
+
+.M_SwichBox {
+  height: 25px;
+  width: 25px;
+}
+
+.M_SwichBoxBefo {
+  left: 1px;
+}
+
+.M_SwichBoxAfter {
+  left: 20px
+}
+/* ------------------------------------------- */
+.S_SwichToggle  {
+  width: 40px;
+  height: 20px;
+}
+
+.S_SwichBox {
+  width: 16px;
+  height: 16px;
+}
+
+.S_SwichBoxBefo {
+  left: 1px
+}
+
+.S_SwichBoxAfter {
+  left: 20px
+}
+/* ------------------------------------------- */
+.XS_SwichToggle {
+  width: 30px;
+  height: 15px;
+}
+
+.XS_SwichBox {
+  width: 12px;
+  height: 12px;
+}
+
+.XS_SwichBoxBefo {
+  left: 1px
+}
+
+.XS_SwichBoxAfter  {
+  left: 15px
 }

@@ -11,7 +11,7 @@ import { ViewList } from "../../../../types/view";
 const CheckboxPage: FC<CheckboxProps> = () => {
 
   const [checkboxProps, setCheckboxProps] = useState<CheckboxProps>({
-  label: '',
+  label: 'Checkbox',
   view: 'primary',
   checked: false,
   disabled: false,
@@ -23,6 +23,7 @@ const CheckboxPage: FC<CheckboxProps> = () => {
       <div className="styleBox">
         <Checkbox
           {...checkboxProps}
+          onChange={() => setCheckboxProps({...checkboxProps, checked: true ? !checkboxProps.checked : true})}
         />
       </div>
       <div className='styleBoxMenu'>

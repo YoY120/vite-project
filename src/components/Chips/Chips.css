@@ -1,67 +1,74 @@
-.labelRadio {
+/**
+ * Основной класс
+ */
+.Chips {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
 
   gap: 10px;
 }
-
-.Checkbox {
-  display: flex;
-
-  width: auto;
-  height: auto;
-
-  margin: 0px;
+/**
+ * Статус
+ */
+.statusChips_normal {
+  background-color:  #5f5f5f;
+  color: #FAFAFA;
 }
 
-.primary {
-  color-scheme: white;
-  color: white
+.statusChips_system {
+  background-color:  #00098c;
+  color: #FAFAFA;
 }
 
-.primary:hover {
-  color-scheme: blue;
-  color: blue;
+.statusChips_success {
+  background-color:  #358C00;
+  color: #FAFAFA;
 }
 
-.ghost {
-  color-scheme: rgba(128, 128, 128, 0.486);
-  color:  rgba(128, 128, 128, 0.486);
+.statusChips_warning {
+  background-color:  #a8b400;
+  color: #FAFAFA;
 }
 
-.ghost:hover {
-  color-scheme: rgba(128, 128, 128, 0.486);
-  color:  rgba(128, 128, 128, 0.486);
+.statusChips_error {
+  background-color:  #8c0000;
+  color: #FAFAFA;
 }
-
-.L_Checkbox {
-  width: 15px;
-}
-
-.L_Checkbox_Font {
+/**
+ * Размер 
+ */
+.sizeChips_L {
+  min-height: 48px;
+  padding: 0 20px;
+  min-width: 134px;
   font-size: 18px;
 }
 
-.M_Checkbox {
-  width: 13px;
-}
-
-.M_Checkbox_Font {
+.sizeChips_M {
+  min-height: 40px;
+  padding: 0 16px;
   font-size: 16px;
+  min-width: 111px;
 }
 
-.S_Checkbox {
-  width: 10px;
-}
-
-.S_Checkbox_Font {
+.sizeChips_S {
+  min-height: 32px;
+  padding: 0 12px;
   font-size: 14px;
+  min-width: 87px;
 }
 
-.XS_Checkbox {
-  width: 6px;
-}
-
-.XS_Checkbox_Font{
+.sizeChips_XS {
+  min-height: 24px;
+  padding: 0 8px;
   font-size: 12px;
+  min-width: 79px;
+}
+
+.isActiveChips {
+  background-color: #8c0000;
 }

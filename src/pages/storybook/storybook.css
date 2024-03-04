@@ -1,31 +1,38 @@
+/**
+ * Меню выбора
+ */
 .styleBlock {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
-  align-items: center;
-
-  gap: 20px;
+  gap: 10px;
+  width: 1400px;
 
   margin-bottom: 20px;
 }
-
+/**
+ * Стили контента
+ */
 .styleBoxButton {
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  /* max-width: 1280px; */
-
   gap: 10px;
 }
-
+/**
+ * Стиль элемента
+ */
 .styleBox {
   display: flex;
   justify-content: center;
 
   min-width: 400px;
 }
-
+/**
+ * Меню изменение элемента
+ */
 .styleBlockInput {
   display: flex;
   flex-direction: row;
@@ -33,42 +40,45 @@
 
   gap: 10px;
 }
-
+/**
+ * Меню изменение элемента
+ */
 .styleBoxMenu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  max-width: 880px;
+  flex-wrap: wrap;
 
   align-content: flex-start;
-  overflow: auto;
+  /* overflow: auto; */
 
   border-left: 2px solid white;
 
   gap: 10px;
   padding: 50px;
 }
-
+/**
+ * 
+ */
 .styleImputMenu {
   display: flex;
   flex-direction: column;
 
   gap: 10px;
 }
-
+/**
+ * Отдельные элемента в меню стилизации элемента
+ */
 .styleButtonMenu {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid black;
+
+  padding: 10px 0;
 
   gap: 10px;
 }
 
-.navigation {
-  margin-bottom: 20px;
 
-  display: flex;
-  justify-content: space-evenly;
-
-  gap: 10px;
-}

@@ -96,6 +96,10 @@
 /**
  * Размер input L
  */
+.XL_Caption {
+  font-size: 18px;
+}
+
 .L_Caption {
   font-size: 16px;
 }
@@ -137,4 +141,27 @@
 .Caption {
   display: flex;
   height: auto;
+}
+
+/**
+ * Размер Label
+ */
+.XL_LabelTextField {
+  font-size: 18px;
+}
+
+.L_LabelTextField {
+  font-size: 16px;
+}
+
+.M_LabelTextField {
+  font-size: 14px;
+}
+
+.S_LabelTextField {
+  font-size: 12px;
+}
+
+.XS_LabelTextField {
+  font-size: 10px;
 }

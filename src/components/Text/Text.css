@@ -130,27 +130,27 @@ body {
 /**
  *  Насыщенность
  */ 
-.black {
+.black_Text {
   font-weight: 900;
 }
 
-.bold {
+.bold_Text {
   font-weight: bold;
 }
 
-.light {
+.light_Text {
   font-weight: 300;
 }
 
-.regular {
+.regular_Text {
   font-weight: normal;
 }
 
-.semibold {
+.semibold_Text {
   font-weight: 600;
 }
 
-.thin {
+.thin_Text {
   font-weight: 100;
 }
 
@@ -158,30 +158,30 @@ body {
  *  Выравнивание
  */
 
-.left {
+.left_Text {
   text-align: left;
 }
 
-.center {
+.center_Text {
   text-align: center;
 }
 
-.right {
+.right_Text {
   text-align: right;
 }
 
 /**
  *  Поведение контейнера с текстом в документе (блочный или строчный элемент)
  */
-.block {
+.block_Text {
   display: block;
 }
 
-.inlineBlock {
+.inlineBlock_Text {
   display: inline-block;
 }
 
-.inline {
+.inline_Text {
   display: inline;
 }
 

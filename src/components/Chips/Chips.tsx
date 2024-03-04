@@ -7,20 +7,25 @@ import classNames from "classnames";
  * Типы кнопок
  */
 const Chips: FC<ChipsProps> = ({
+  Chipslist = [],
   status = 'normal',
-  label = '',
   isActive = true,
   size = 'M',
-  onClick = () => (null), 
+  onClick = () => (null),
 }) => {
 
   return (
-    <div>
-      <button
-        className = {classNames('Chips', isActive && 'isActive' , size && `size_${size}`, status && `status_${status}`)}
-        onClick = {onClick}>
-          {label}
-      </button>
+    <div className="Chips">
+      {Chipslist.map((item) => (
+        <button
+          className = {classNames('Chips', 
+            isActive && 'isActiveChips' , 
+            size && `sizeChips_${size}`, 
+            status && `statusChips_${status}`)}
+          onClick = {() => onClick(item)}
+        >
+          {item}
+        </button>))}
     </div>
   )
 }
