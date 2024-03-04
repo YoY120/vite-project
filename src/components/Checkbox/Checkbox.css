@@ -1,10 +1,15 @@
-.labelRadio {
+/**
+ * Класс label
+ */
+.labelCheckbox {
   display: flex;
   flex-direction: row;
 
   gap: 10px;
 }
-
+/**
+ * Основной класс Checkbox
+ */
 .Checkbox {
   display: flex;
 
@@ -13,27 +18,31 @@
 
   margin: 0px;
 }
-
-.primary {
+/**
+ * Стили
+ */
+.primary_Checkbox {
   color-scheme: white;
   color: white
 }
 
-.primary:hover {
+.primary_Checkbox:hover {
   color-scheme: blue;
   color: blue;
 }
 
-.ghost {
+.ghost_Checkbox {
   color-scheme: rgba(128, 128, 128, 0.486);
   color:  rgba(128, 128, 128, 0.486);
 }
 
-.ghost:hover {
+.ghost_Checkbox:hover {
   color-scheme: rgba(128, 128, 128, 0.486);
   color:  rgba(128, 128, 128, 0.486);
 }
-
+/**
+ * Размер
+ */
 .L_Checkbox {
   width: 15px;
 }

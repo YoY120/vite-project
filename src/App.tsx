@@ -38,6 +38,12 @@ const App: FC = () => {
       {/* <Button label='myCalculate (input)' onClick={() => setPage('myCalculate (input)')}/> */}
       <Button label='calculate (Button)' onClick={() => setPage('calculate_(Button)')}/>
       <Button label='Task page' onClick={() => setPage('taskPage')}/>
+      <Button
+          isDarkTheme={isDarkTheme}
+          label='светлая / темная тема'
+          view='Secondary'
+          onClick={handleThemeClickDark}
+        />
     </div>
   )
 
@@ -45,10 +51,6 @@ const App: FC = () => {
     <>
       {renderNavigation()}
       {renderContent()}
-      <TextPage
-        isDarkTheme = {isDarkTheme ? true : false}
-        handleThemeClick = {handleThemeClickDark}
-        />
     </>
   )
 }

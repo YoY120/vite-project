@@ -8,47 +8,12 @@ import StorybookSizeComponent from "../../../../components/StorybookSizeComponen
 
 const ButtonPage: FC<ButtonProps> = () => {
   const [buttonProps, setButtonProps] = useState<ButtonProps>({
-    label: 'Хз',
+    label: 'Кнопка',
     disabled: false, 
     loading: false,
     view: 'Primary',
     size: 'L',
   });
-
-  /**
-   *  Обработчик блокировки кнопки
-   */
-  const [disabledState, setDisabledState] = useState<boolean>(false);
-
-  /**
-   *  Обработчик загрузки кнопки
-   */
-  const [loadingState, setLoadingState] = useState<boolean>(false);
-
-  function handlDisabledClick() {
-    if (disabledState && !loadingState) {
-      setDisabledState(false);
-      setLoadingState(true);
-    } else {
-      setDisabledState(true);
-      setLoadingState(false);
-    }
-  }
-
-  function handlLoadingClick() {
-    if (!loadingState && disabledState) {
-      setLoadingState(true);
-      setDisabledState(false);
-    } else {
-      setLoadingState(false);
-      setDisabledState(true);
-    }
-  }
-
-  function handlLoadDisablClick() {
-    setLoadingState(false);
-    setDisabledState(false);
-  }
 
   return (
       <div className='styleBoxButton'>

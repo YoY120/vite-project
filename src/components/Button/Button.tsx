@@ -16,11 +16,11 @@ const Button: FC<ButtonProps> = ({
   isDarkTheme = true,
 }) => {
   const buttonClassNames = `Button 
-  ${className} 
-  ${size}_button
-  ${isDarkTheme ? `${view}_Dark` : `${view}_light`} 
-  ${disabled ? 'disabled' : '' } 
-  ${loading ? 'loading' : ''}`;
+    ${className} 
+    ${size}_button
+    ${isDarkTheme ? `${view}_Dark` : `${view}_light`} 
+    ${disabled ? 'disabledButton' : '' } 
+    ${loading ? 'loadingButton' : ''}`;
 
   return <button className={buttonClassNames} onClick={onClick}>{label}</button>
 }

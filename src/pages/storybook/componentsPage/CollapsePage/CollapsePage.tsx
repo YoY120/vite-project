@@ -1,4 +1,4 @@
-import React, { FC, useState} from "react";
+import React, { Children, FC, useState} from "react";
 import { CollapseProps } from "../../../../components/Collapse/type";
 import Button from "../../../../components/Button/Button";
 import Collapse from "../../../../components/Collapse/Collapse";
@@ -18,40 +18,62 @@ export const CollapsePage: FC<CollapseProps> = () => {
     divider: false,
     horizontalSpace: 'S',
     isOpen: false,
+    children: '',
   });
 
   return (
     <div className='styleBoxButton'>
       <div className="styleBox">
+        {/**
+         * Collapse
+         */}
         <Collapse
           {...collapseProps}
+          onClick={() => setCollapseProps({...collapseProps, isOpen: true ? !collapseProps.isOpen : false})}
         >
-          <div>fdsdfs</div>
-          <div>dfsdfs</div>
-          <div>dfdfs</div>
-          <div>sdfdfs</div>
+        {collapseProps.children}
         </Collapse>
       </div>
       <div className='styleBoxMenu'>
         <div className='styleButtonMenu'>
+          {/**
+           * Поле для ввода названия кнопки collaps
+           */}
           <TextField
-            label='Назвае кнопки'
+            label='Назвае collaps'
             onChange={e => setCollapseProps({...collapseProps, label: e.target.value})}
             size='L'
           />
+          {/**
+           * Поле для ввода скрытого текста
+           */}
           <TextField
-            label='Назвае кнопки'
+            label='Скрытый текст'
             onChange={e => setCollapseProps({...collapseProps, children: e.target.value})}
             size='L'
           />
         </div>
         <div className='styleButtonMenu'>
+          {/**
+           * Показывает скрытый текст
+           */}
           <Button
             label={`isOpen: ${String(collapseProps.isOpen === true)}`} 
             onClick={() => setCollapseProps({...collapseProps, isOpen: true ? !collapseProps.isOpen : false})}
             view='Secondary'
           />
+          {/**
+           * Черта
+           */}
+          <Button
+            label={`divider: ${String(collapseProps.divider === true)}`} 
+            onClick={() => setCollapseProps({...collapseProps, divider: true ? !collapseProps.divider : false})}
+            view='Secondary'
+          />
         </div>
+        {/**
+         * Развмер кнопки
+         */}
         <StorybookSizeComponent
           label="Размер кнопки"
           buttonLabel='Размер'
@@ -59,6 +81,9 @@ export const CollapsePage: FC<CollapseProps> = () => {
           selectedSize={collapseProps.size}
           onSizeClick={(size) => (setCollapseProps({...collapseProps, size}))}
         />
+        {/**
+         * Внешний вид
+         */}
         <StorybookViewFullComponent
           label='Вид Кнопки'
           buttonLabelViewFull='Вид'
@@ -66,10 +91,16 @@ export const CollapsePage: FC<CollapseProps> = () => {
           selecteViewFull={collapseProps.view}
           onViewFullClick={(view) => (setCollapseProps({...collapseProps, view}))}
         />
+        {/**
+         * Форма
+         */}
         <ButtonPageForm
           form={collapseProps.form}
           onFormClick={(form) => setCollapseProps({...collapseProps, form})}
         />
+        {/**
+         * Отсутпы
+         */}
         <StorybookSizeComponent
           label="Горизонтальные отступы"
           buttonLabel='Отступ'

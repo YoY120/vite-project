@@ -22,8 +22,8 @@
 /**
  * Цвет выбранной кнопки
  */
-.Button:hover {
-  background-color: #296801;
+.Button:active {
+  background-color: #680101;
 }
 
 /**
@@ -63,9 +63,6 @@
   color: rgb(0, 0, 0);
 }
 
-/**
- * Не знаю что :\
- */
 .Clear {
   background: rgba(18, 18, 18, 0.00);
 }
@@ -104,21 +101,21 @@
 /**
  * Блокировка кнопки
  */
-.disabled {
+.disabledButton {
   background-color: #FAFAFA26;
 }
 
-.disabled:hover {
+.disabledButton:hover {
   background-color: #FAFAFA35;
 }
 
 /**
  * Режим загрузки
  */
-.loading {
+.loadingButton {
   background-color: red;
 }
 
-.loading:hover {
+.loadingButton:hover {
   background-color: red;
 }

@@ -13,9 +13,20 @@ const Switch: FC<SwitchProps> = ({
   size = 'L',
   onChange = () => null,
 }) => {
-  const SwitchClassName = `toggleSwitch ${checked === false ? 'toggleSwitch_befo' : 'toggleSwitch_after'}`;
-
-  const CheckboxInput = `checkboxInput ${checked === false ? 'checkboxInput_befo' : 'checkboxInput_after'}`;
+  /**
+   * Рамка
+   */
+  const SwitchClassName = `toggleSwitch 
+  ${checked === false 
+    ? `toggleSwitch_befo ${view}_SwichToggleBefo ${size}_SwichToggle`
+    : `toggleSwitch_after ${view}_SwichToggleAfter ${size}_SwichToggle`}`;
+  /**
+   * Переключатель
+   */
+  const CheckboxInput = `checkboxInput 
+  ${checked === false 
+    ? `checkboxInput_befo ${view}_SwichBoxBefo ${size}_SwichBox ${size}_SwichBoxBefo` 
+    : `checkboxInput_after ${view}_SwichBoxAfter ${size}_SwichBox ${size}_SwichBoxAfter`}`;
 
   return (
     <div className="switchContainer">
@@ -29,7 +40,7 @@ const Switch: FC<SwitchProps> = ({
           />
         </label>
       </div>
-      <div className = {`${view ? view : ''} 
+      <div className = {`${view ? `${view}_Swich` : ''} 
         ${size === 'L' ? 'L_Switch_Font' : ''} 
         ${size === 'M' ? 'M_Switch_Font' : ''} 
         ${size === 'S' ? 'S_Switch_Font' : ''} 

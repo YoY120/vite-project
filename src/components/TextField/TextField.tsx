@@ -25,7 +25,11 @@ const TextField: FC<TextFieldProps> = ({
   return (
     <div>
       <label className= {`Label 
-        ${size ? size : ''}`}  
+        ${size === 'L' && 'L_LabelTextField'}
+        ${size === 'M' && 'M_LabelTextField'}
+        ${size === 'S' && 'S_LabelTextField'}
+        ${size === 'XS' && 'XS_LabelTextField'}
+        ${size === 'XL' && 'XL_LabelTextField'}`}  
         htmlFor="username"
         >
         {label}
@@ -37,7 +41,13 @@ const TextField: FC<TextFieldProps> = ({
         id="username" 
         onChange={onChange}
       />
-      <caption className={`Caption ${size ? size : ''}`}>
+      <caption className={`Caption 
+        ${size === 'L' && `L_Caption`}
+        ${size === 'M' && `M_Caption`}
+        ${size === 'S' && `S_Caption`}
+        ${size === 'XS' && `XS_Caption`}
+        ${size === 'XL' && `XL_Caption`}`}
+      >
         {caption}
       </caption>
     </div> 

@@ -22,8 +22,9 @@ import {CollapsePage} from './componentsPage/CollapsePage/CollapsePage';
 import TabsPage from './componentsPage/TabsPage/TabsPage';
 import Collapse from '../../components/Collapse';
 import ChoiseGroup from '../../components/ChoiseGroup';
+import ChoiseGroupPage from './componentsPage/ChoiseGroupPage/ChoiseGroupPage';
 
-type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs'; 
+type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiseGroupPage'; 
 
 const choiseList: string[] = [
   'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips', 'Text', 'Collapse', 'Tabs'
@@ -84,7 +85,7 @@ export const Storybook = () => {
        */
       case ('Chips'):
         return (
-          <ChipsPage/>
+          <ChipsPage label='' Chipslist = {[]}/>
         );
       /**
        * Text
@@ -100,12 +101,19 @@ export const Storybook = () => {
         return (
           <CollapsePage label=''/>
         )
-        /**
-         * Tabs
-         */
+      /**
+       * Tabs
+       */
       case ('Tabs'):
         return (
           <TabsPage/>
+        )
+      /**
+       * ChoiseGroupPage
+       */
+      case ('ChoiseGroupPage'):
+        return (
+          <ChoiseGroupPage list = {[]} selectedItem='' onClick={() => null} />
         )
     }
   }
@@ -151,6 +159,10 @@ export const Storybook = () => {
         label='Tabs'
         onClick={() => setHidden('Tabs')}
       />
+      <Button
+        label='ChoiseGroupPage'
+        onClick={() => setHidden('ChoiseGroupPage')}
+      />
     </div>
   )
 
@@ -161,7 +173,7 @@ export const Storybook = () => {
     <>
       {renderInternalMenu()}
       {renderInternalContent()}
-      <Collapse
+      {/* <Collapse
         label='Тестовый колапс'
         isOpen={isOpenCollapse}
         onClick={() => setIsOpenCollapse(!isOpenCollapse)}
@@ -175,7 +187,7 @@ export const Storybook = () => {
         list={choiseList}
         selectedItem={keyChose}
         onClick={(key) => setKeyChose(keyChose === key ? null : key)}
-      />
+      /> */}
     </>
   )
 }

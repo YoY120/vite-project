@@ -14,7 +14,7 @@ const Checkbox: FC<CheckboxProps> = ({
   onChange = () => null,
 }) => {
   const CheckboxClassName = `Checkbox 
-  ${view ? view : ''} 
+  ${view ? `${view}_Checkbox` : ''} 
   ${size}_Chackbox`;
 
   return (
@@ -28,7 +28,7 @@ const Checkbox: FC<CheckboxProps> = ({
           type = "Checkbox"
         />
         <span 
-          className = {`${view ? view : ''} 
+          className = {`${view ? `${view}_checkbox` : ''} 
           ${size === 'L' ? 'L_Font' : ''} 
           ${size === 'M' ? 'M_Font' : ''} 
           ${size === 'S' ? 'S_Font' : ''} 

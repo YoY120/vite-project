@@ -30,12 +30,12 @@ const Text: FC<TextProps> = ({
     lineHeight_${lineHeight}
     spacing_${spacing}
     ${fontStyle ? fontStyle : ''}
-    ${weight ? weight : ''}
+    ${weight ? `${weight}_Text` : ''}
     ${transform ? transform : ''}
     ${cursor ? cursor : ''}
     ${decoration ? decoration : ''}
-    ${align ? align : ''}
-    ${display ? display : ''}
+    ${align ? `${align}_Text`: ''}
+    ${display ? `${display}_Text`: ''}
     sizeText_${size}`;
 
   return (

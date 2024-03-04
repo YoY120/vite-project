@@ -24,14 +24,15 @@ const Collapse: FC<CollapseProps> = ({
           size && `collapseSize_${size}`, 
           form && `collapseForm_${form}`, 
           view && `collapseView_${view}`, 
-          divider && 'collapseDivider', 
+          
           horizontalSpace && `collapseHorisontalSpace_${horizontalSpace}`,
           className,
           )}
           onClick={onClick}>
         {label}
       </button>
-      {isOpen && children}
+      <div className = {classNames(divider && 'collapseDivider')}></div>
+      <div className="children_Collapse">{isOpen && children}</div>
     </div>
   )
 }
