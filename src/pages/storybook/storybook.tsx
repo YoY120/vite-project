@@ -24,7 +24,7 @@ import Collapse from '../../components/Collapse';
 import ChoiseGroup from '../../components/ChoiseGroup';
 import ChoiseGroupPage from './componentsPage/ChoiseGroupPage/ChoiseGroupPage';
 
-type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiseGroupPage'; 
+type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiseGroup'; 
 
 const choiseList: string[] = [
   'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips', 'Text', 'Collapse', 'Tabs'
@@ -111,7 +111,7 @@ export const Storybook = () => {
       /**
        * ChoiseGroupPage
        */
-      case ('ChoiseGroupPage'):
+      case ('ChoiseGroup'):
         return (
           <ChoiseGroupPage list = {[]} selectedItem='' onClick={() => null} />
         )
@@ -161,7 +161,7 @@ export const Storybook = () => {
       />
       <Button
         label='ChoiseGroupPage'
-        onClick={() => setHidden('ChoiseGroupPage')}
+        onClick={() => setHidden('ChoiseGroup')}
       />
     </div>
   )

@@ -3,9 +3,6 @@
  */
 .ChoiseGroup {
   display: flex;
-
-  /* border: 1px solid black;
-  border-radius: 12px; */
 }
 /**
  * Офромление каждого элемента
@@ -14,14 +11,12 @@
   cursor: pointer;
 
   padding: 10px;
-  /* border-right: 1px solid black; */
   min-width: 40px;
 }
 /**
  * Стили первого элемента в массиве для brick
  */
 .brickOne {
-  /* border: 1px solid black; */
   border: 1px solid black;
   border-radius: 20px 0px 0px 20px;
 }
@@ -50,10 +45,11 @@
   border-radius: 20px;
 }
 
-.round {
+.round_ChoiseGroup {
   border: 1px solid black;
   border-radius: 20px;
 }
+
 /**
  *  Стили первого элемента в массиве для default
  */
@@ -129,20 +125,26 @@
 /**
  *  Выбранный элемент
  */
-.selectedItem {
+.selectedItem_ChoiseGroup {
   background-color: red;
 }
 /**
  * Активная кнопка для round
  */
-.roundOne .selectedItem {
+.roundOne .selectedItem_ChoiseGroup {
   background-color: red;
   border-radius: 20px;
 }
 /**
  * Неактивная кнопка
  */
-.disabled {
+.disabledItem_ChoiseGroup {
+  background: gray;
+}
+/**
+ * Неактивные кнопки
+ */
+.disabled_ChoiseGroup {
   background: gray;
 }
 
