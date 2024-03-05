@@ -1,9 +1,12 @@
+/* TODO: Нужно переименовать Choise => Choice */
+
 /**
- * внешнее оформление
+ * Общий стиль для группы
  */
 .ChoiseGroup {
   display: flex;
 }
+
 /**
  * Офромление каждого элемента
  */
@@ -20,6 +23,8 @@
   border: 1px solid black;
   border-radius: 20px 0px 0px 20px;
 }
+
+/* TODO: название записано неверно (brich) не знаю слово такого, возможно хотел brick */
 /**
  * Стили последующих элементов в массиве
  */
@@ -28,6 +33,7 @@
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
+
 /**
  * Стили последнего элемента в массиве
  */
@@ -37,6 +43,7 @@
   border-right: 1px solid black;
   border-radius: 0px 20px 20px 0px;
 }
+
 /**
  * Стили для round
  */
@@ -50,11 +57,14 @@
   border-radius: 20px;
 }
 
+/* TODO: тут явно путиница с названиями. Внимательно проверь default_ChoseGroup defaultOne defaultOther defaultEnd
+     Напиши комментарии, что-бы было проще разобратся*/
 /**
  *  Стили первого элемента в массиве для default
  */
 .default_ChoseGroup {
-  border: 0px solid;
+  /* При 0 не нужно писать px */
+  border: 0 solid;
   border-radius: 20px;
 }
 
@@ -62,23 +72,20 @@
   border: 1px solid black;
   border-radius: 20px 0px 0px 20px;
 }
-/**
- * 
- */
+
 .defaultOther {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
-/**
- * 
- */
+
 .defaultEnd {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
   border-radius: 0px 20px 20px 0px;
 }
+
 /**
  * Размеры
  */
@@ -115,19 +122,20 @@
 }
 
 .ghost_viewChoiseGroup {
-  /* border: 1px solid rgba(75, 75, 75, 0.80); */
   background: rgba(18, 18, 18, 0.00);
 }
 
 .clear_viewChoiseGroup {
   background: rgba(18, 18, 18, 0.00);
 }
+
 /**
  *  Выбранный элемент
  */
 .selectedItem_ChoiseGroup {
   background-color: red;
 }
+
 /**
  * Активная кнопка для round
  */
@@ -135,12 +143,14 @@
   background-color: red;
   border-radius: 20px;
 }
+
 /**
  * Неактивная кнопка
  */
 .disabledItem_ChoiseGroup {
   background: gray;
 }
+
 /**
  * Неактивные кнопки
  */
