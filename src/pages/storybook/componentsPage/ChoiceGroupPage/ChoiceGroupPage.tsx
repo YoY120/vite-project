@@ -1,20 +1,20 @@
 import React, { FC, useState } from "react";
-import { ChoiseGroupProps } from "../../../../components/ChoiseGroup/types";
-import ChoiseGroup from "../../../../components/ChoiseGroup/ChoiseGroup";
+import { ChoiceGroupProps } from "../../../../components/ChoiceGroup/types";
+import ChoiceGroup from "../../../../components/ChoiceGroup/ChoiceGroup";
 import Button from "../../../../components/Button/Button";
 import StorybookSizeComponent from "../../../../components/StorybookSizeComponent";
 import { sizeList } from "../../../../types/size";
 import StorybookViewFullComponent from "../../../../components/StorybookViewComponent/StorybookViewFullComponent";
 import { ViewList } from "../../../../types/view";
-import ChoiseGroupPageForm from "./ChoiseGroupPageForm/ChoiseGroupPageForm";
+import ChoiseGroupPageForm from "./ChoiceGroupPageForm/ChoiceGroupPageForm";
 
-const choiseGroupList: string[] = [
+const choiceGroupList: string[] = [
   'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips'
 ];
 
-const ChoiseGroupPage: FC<ChoiseGroupProps> = () => {
-  const [choiseGroupProps, setChoiseGroupProps] = useState<ChoiseGroupProps>({
-    form: 'brick',
+const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
+  const [choiceGroupProps, setChoiceGroupProps] = useState<ChoiceGroupProps>({
+    form: 'brich',
     list: [],
     onClick: (key) => (null),
     selectedItem: '',
@@ -28,14 +28,14 @@ const ChoiseGroupPage: FC<ChoiseGroupProps> = () => {
   return (
     <div className='styleBoxButton'>
         <div className="styleBox">
-          <ChoiseGroup
-            list={choiseGroupList}
+          <ChoiceGroup
+            list={choiceGroupList}
             selectedItem={keyChose}
             onClick={(key) => setKeyChose(keyChose === key ? null : key)}
-            size={choiseGroupProps.size}
-            form={choiseGroupProps.form}
-            view={choiseGroupProps.view}
-            disabled={choiseGroupProps.disabled}
+            size={choiceGroupProps.size}
+            form={choiceGroupProps.form}
+            view={choiceGroupProps.view}
+            disabled={choiceGroupProps.disabled}
           />
         </div>
         <div className='styleBoxMenu'>
@@ -44,8 +44,8 @@ const ChoiseGroupPage: FC<ChoiseGroupProps> = () => {
              * Состояние кнопки
              */}
             <Button
-              label={`Disabled: ${String(choiseGroupProps.disabled === true)}`} 
-              onClick={() => setChoiseGroupProps({...choiseGroupProps, disabled: true ? !choiseGroupProps.disabled : true})}
+              label={`Disabled: ${String(choiceGroupProps.disabled === true)}`} 
+              onClick={() => setChoiceGroupProps({...choiceGroupProps, disabled: true ? !choiceGroupProps.disabled : true})}
               view='Secondary'
             />
           </div>
@@ -56,8 +56,8 @@ const ChoiseGroupPage: FC<ChoiseGroupProps> = () => {
             label="Вид checkbox"
             buttonLabelViewFull='Вид'
             listViewFull={ViewList}
-            selecteViewFull={choiseGroupProps.view}
-            onViewFullClick={(view) => (setChoiseGroupProps({...choiseGroupProps, view}))}
+            selecteViewFull={choiceGroupProps.view}
+            onViewFullClick={(view) => (setChoiceGroupProps({...choiceGroupProps, view}))}
           />
           {/**
            * Размер кнопки
@@ -66,19 +66,19 @@ const ChoiseGroupPage: FC<ChoiseGroupProps> = () => {
             label="Размер кнопки"
             buttonLabel='Размер'
             list={sizeList}
-            selectedSize={choiseGroupProps.size}
-            onSizeClick={(size) => (setChoiseGroupProps({...choiseGroupProps, size}))}
+            selectedSize={choiceGroupProps.size}
+            onSizeClick={(size) => (setChoiceGroupProps({...choiceGroupProps, size}))}
           />
           {/**
            *  Форма
            */}
           <ChoiseGroupPageForm
-            form={choiseGroupProps.form}
-            onFormClick={(form) => (setChoiseGroupProps({...choiseGroupProps, form}))}
+            form={choiceGroupProps.form}
+            onFormClick={(form) => (setChoiceGroupProps({...choiceGroupProps, form}))}
           />
       </div>
     </div>
   )
 }
 
-export default ChoiseGroupPage
+export default ChoiceGroupPage
