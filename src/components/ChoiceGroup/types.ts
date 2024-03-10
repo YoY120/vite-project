@@ -6,12 +6,12 @@ import { ViewFull } from "../../types/view";
 /**
  * Форма компонента ChoiseGroup
  */
-export type FormChoiceGroup = 'round' | 'brich' | 'default';
+export type FormChoiceGroup = 'round' | 'brick' | 'default';
 
 // TODO: посмотри в сторону enum, возможно тебе понравится
 export enum FormChoiceGroupEnum {
   round = 'round',
-  brick = 'brich',
+  brick = 'brick',
   default = 'default'
 }
 
@@ -19,7 +19,7 @@ export enum FormChoiceGroupEnum {
 /**
  * Список форм компонента ChoiseGroup
  */
-export const FormChoiсeGroupList: FormChoiceGroup[] = ['round', 'brich', 'default'];
+export const FormChoiсeGroupList: FormChoiceGroup[] = ['round', 'brick', 'default'];
 
 // TODO: не хватает комментария для типа
 /**

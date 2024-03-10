@@ -10,7 +10,7 @@ import classNames from "classnames"
  * Группа кнопок. Можно выбрать один или несколько вариантов.
  */
 const ChoiceGroup: FC<ChoiceGroupProps> = ({
-  form = 'brich',
+  form = 'brick',
   list,
   onClick,
   selectedItem,
@@ -31,7 +31,7 @@ const ChoiceGroup: FC<ChoiceGroupProps> = ({
  */
   const getFormByItem = (index: number) => {
     switch (form) {
-      case 'brich': return 'brich_FormChoiceGroup';
+      case 'brick': return 'brick_FormChoiceGroup';
       case 'round': return 'round_FromChoiceGroup';
       case 'default': return 'default_FormChoiceGroup';
     }

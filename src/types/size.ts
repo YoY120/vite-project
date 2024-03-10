@@ -23,4 +23,3 @@
 
   // TODO: вынести внутрь компонентов в storybook
   export const sizeListByTextField: Size[] = ['XL', 'L', 'M', 'S', 'XS'];
-

@@ -14,7 +14,7 @@ const choiceGroupList: string[] = [
 
 const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
   const [choiceGroupProps, setChoiceGroupProps] = useState<ChoiceGroupProps>({
-    form: 'brich',
+    form: 'brick',
     list: [],
     onClick: (key) => (null),
     selectedItem: '',
@@ -23,15 +23,15 @@ const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
     disabled: false,
   });
 
-  const [keyChose, setKeyChose] = useState<string | null>(null);
+  const [keyChoce, setKeyChose] = useState<string | null>(null);
 
   return (
     <div className='styleBoxButton'>
         <div className="styleBox">
           <ChoiceGroup
             list={choiceGroupList}
-            selectedItem={keyChose}
-            onClick={(key) => setKeyChose(keyChose === key ? null : key)}
+            selectedItem={keyChoce}
+            onClick={(key) => setKeyChose(keyChoce === key ? null : key)}
             size={choiceGroupProps.size}
             form={choiceGroupProps.form}
             view={choiceGroupProps.view}
@@ -40,18 +40,12 @@ const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
         </div>
         <div className='styleBoxMenu'>
           <div className='styleButtonMenu'>
-            {/**
-             * Состояние кнопки
-             */}
             <Button
               label={`Disabled: ${String(choiceGroupProps.disabled === true)}`} 
               onClick={() => setChoiceGroupProps({...choiceGroupProps, disabled: true ? !choiceGroupProps.disabled : true})}
               view='Secondary'
             />
           </div>
-          {/**
-           * Вид кнопки
-           */}
           <StorybookViewFullComponent
             label="Вид checkbox"
             buttonLabelViewFull='Вид'
@@ -59,9 +53,6 @@ const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
             selecteViewFull={choiceGroupProps.view}
             onViewFullClick={(view) => (setChoiceGroupProps({...choiceGroupProps, view}))}
           />
-          {/**
-           * Размер кнопки
-          */}
           <StorybookSizeComponent
             label="Размер кнопки"
             buttonLabel='Размер'
@@ -69,9 +60,6 @@ const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
             selectedSize={choiceGroupProps.size}
             onSizeClick={(size) => (setChoiceGroupProps({...choiceGroupProps, size}))}
           />
-          {/**
-           *  Форма
-           */}
           <ChoiseGroupPageForm
             form={choiceGroupProps.form}
             onFormClick={(form) => (setChoiceGroupProps({...choiceGroupProps, form}))}
