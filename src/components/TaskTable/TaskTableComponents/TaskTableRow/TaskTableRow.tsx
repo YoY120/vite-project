@@ -8,9 +8,26 @@ type TaskTableRowProps = {
 }
 
 const TaskTableRow: FC<TaskTableRowProps> = ({rowlist}) => {
+  /**
+   * Функция, которая переберает все значения в массиве
+   */
+  const renderTableRow = rowlist.map(function(item, id) {
+    for (id; id < rowlist.length; id++) {
+      return (
+        <td key={item.id}>
+          {item.description}
+        </td>
+    )}
+  })
+
+  
+
   return (
+    /**
+     * Всего лишь попытки
+     */
     // <div>
-    //   {rowlist.map((item) => (
+    //   {rowlist.map((item, index) => (
     //     <table>
     //       <TaskTableHeader headerlist={[item]}/>
     //       <tbody>
@@ -23,15 +40,34 @@ const TaskTableRow: FC<TaskTableRowProps> = ({rowlist}) => {
     //     </table>
     //   ))}
     // </div>
-    <table>
-      {rowlist.map((item) => <TaskTableHeader headerlist={[item]}/>)}
-      <tbody>
+
+    // <table>
+    //   {Array(rowlist).fill(rowlist).map((item, id) => <TaskTableHeader key={id} headerlist={item}/>)}
+    //   <tbody>
+    //     <tr>
+    //       {rowlist.map((item) => (
+    //         <td key={item.id++}>
+    //           {item.description}
+    //         </td>
+    //       ))}
+    //     </tr>
+    //   </tbody>
+    // </table>
+
+    /**
+     * Рендер таблицы
+     */
+    <table className="Table">
+      {/**
+       * Рендер заголовка таблицы
+       */}
+      {Array(rowlist).fill(rowlist).map((item, id) => <TaskTableHeader key={id} headerlist={item}/>)}
+      {/**
+       * Рендер строки
+       */}
+      <tbody className="tableRow">
         <tr>
-          {rowlist.map((TaskTableRowProps) => (
-            <td key={TaskTableRowProps.id}>
-              {TaskTableRowProps.description}
-            </td>
-          ))}
+          {renderTableRow}
         </tr>
       </tbody>
     </table>

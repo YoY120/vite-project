@@ -7,14 +7,33 @@ export type TaskTableHeaderProps = {
 }
 
 const TaskTableHeader: FC<TaskTableHeaderProps> = ({headerlist}) => {
+
+  // const renderTableHeader = (item) => {
+  //   return (
+  //     {headerlist.map((item) => (
+  //       <th key={item.id}>
+  //         {item.name}
+  //       </th>
+  //     ))}
+  //   )
+  // }
+  /**
+   * Функция, котороая переюерает значения массива
+   */
+  const renderTableHeader = headerlist.map(function(item, id) {
+    for (id; id < headerlist.length; id++) {
+      return (
+            <th key={item.id}>{item.name}</th>
+          )
+      }
+    })
+  /**
+   * возвращает значения масива
+   */
   return (
-    <thead>
+    <thead className="tableHeader">
       <tr>
-        {headerlist.map((TaskTableHeaderProps) => (
-          <th key={TaskTableHeaderProps.id}>
-            {TaskTableHeaderProps.name}
-          </th>
-        ))}
+        {renderTableHeader}
       </tr>
     </thead>
   )

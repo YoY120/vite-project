@@ -26,36 +26,7 @@ import ChoiseGroupPage from './componentsPage/ChoiseGroupPage/ChoiseGroupPage';
 import TaskTable from '../../components/TaskTable';
 import { Task } from '../../components/TaskTable/TaskTable';
 
-const taskList: Task[] = [
-  {
-    id: 1,
-    name: 'Тестовая задача 1',
-    description: 'Описание тестовой задачи',
-    isArchived: false,
-    isSuccess: false
-  },
-  {
-    id: 2,
-    name: 'Тестовая задача 2',
-    description: 'Описание тестовой задачи',
-    isArchived: false,
-    isSuccess: true
-  },
-  {
-    id: 3,
-    name: 'Тестовая задача 3',
-    description: 'Описание тестовой задачи',
-    isArchived: true,
-    isSuccess: false
-  },
-  {
-    id: 4,
-    name: 'Тестовая задача 4',
-    description: 'Описание тестовой задачи',
-    isArchived: true,
-    isSuccess: true
-  }
-]
+
 
 type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiseGroupPage'; 
 
@@ -208,7 +179,7 @@ export const Storybook = () => {
     <>
       {renderInternalMenu()}
       {renderInternalContent()}
-      <TaskTable list={taskList}/>
+      
       {/* <Collapse
         label='Тестовый колапс'
         isOpen={isOpenCollapse}

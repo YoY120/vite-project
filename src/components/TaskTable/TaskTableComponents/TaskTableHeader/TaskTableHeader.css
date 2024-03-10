@@ -1,0 +1,11 @@
+/**
+ * Стиль заголовка таблицы
+ */
+.tableHeader {
+  display: flex;
+  justify-content: center;
+  
+  border-bottom: 1px solid black;
+
+  background-color: rgb(216, 216, 216);
+}
