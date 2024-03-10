@@ -63,6 +63,8 @@ const choiseList: string[] = [
   'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips', 'Text', 'Collapse', 'Tabs'
 ]
 
+
+
 export const Storybook = () => {
   /**
    *  Переключение компонентов
@@ -150,7 +152,7 @@ export const Storybook = () => {
         )
     }
   }
-
+  console.log(TaskTable)
   /**
    *  Рендер Меню
    */

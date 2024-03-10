@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import TaskTableRow from "./TaskTableComponents/TaskTableRow/TaskTableRow";
 
 export type Task = {
   id: number;
@@ -17,7 +18,9 @@ type TaskTableRowProps = {
 }
 
 const TaskTable: FC<TaskTableProps> = ({list}) => {
-  return <>TaskTable</>
+  return (
+    list.map((item) => <TaskTableRow key={item.id} rowlist={[item]}/>)
+  )
 }
 
 // list.map((item) => <TaskTableRow/>)
