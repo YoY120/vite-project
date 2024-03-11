@@ -69,4 +69,4 @@ const ChoiceGroupPage: FC<ChoiceGroupProps> = () => {
   )
 }
 
-export default ChoiceGroupPage
+export default ChoiceGroupPage;

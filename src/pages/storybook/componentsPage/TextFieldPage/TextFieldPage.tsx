@@ -80,4 +80,4 @@ const TextFieldPage: FC<TextFieldProps> = (labelText) => {
   )
 }
 
-export default TextFieldPage
+export default TextFieldPage;

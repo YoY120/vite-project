@@ -4,7 +4,7 @@ import Button from "../../../../components/Button/Button";
 import Tabs from "../../../../components/Tabs/Tabs";
 import TextField from "../../../../components/TextField";
 import TabsPageSize from "./TabsPageSize/TabsPageSize";
-import TabsPageLinePosition from "./TabsPagelinePosition/TabsPageLinePosition";
+import TabsPageLinePosition from "./TabsPageLinePosition/TabsPageLinePosition";
 
 const TabsPage: FC<TabsProps> = () => {
   const [tabsProps, setTabsProps] = useState<TabsProps>({

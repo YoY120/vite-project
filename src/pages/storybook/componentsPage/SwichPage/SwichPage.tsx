@@ -66,4 +66,4 @@ const SwichPage: FC<SwitchProps> = () => {
   )
 }
 
-export default SwichPage
+export default SwichPage;
