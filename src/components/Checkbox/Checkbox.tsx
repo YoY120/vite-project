@@ -12,10 +12,11 @@ const Checkbox: FC<CheckboxProps> = ({
   disabled = false,
   size = '',
   onChange = () => null,
+  className,
 }) => {
   const CheckboxClassName = `Checkbox 
   ${view ? `${view}_Checkbox` : ''} 
-  ${size}_Chackbox`;
+  ${size}_Chackbox ${className}`;
 
   return (
     <div>
