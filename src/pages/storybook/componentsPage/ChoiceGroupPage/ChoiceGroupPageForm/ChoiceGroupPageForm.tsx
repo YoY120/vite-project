@@ -1,19 +1,19 @@
 import React, { FC } from "react";
-import { FormChoiseGroup, FormChoiseGroupList } from "../../../../../components/ChoiseGroup/types";
+import { FormChoiceGroup, FormChoiсeGroupList } from "../../../../../components/ChoiceGroup/types";
 import Button from "../../../../../components/Button/Button";
 
 type ChoiseGroupFormProps = {
-  form?: FormChoiseGroup | undefined;
+  form?: FormChoiceGroup | undefined;
   isDarkTheme?: boolean | undefined;
-  onFormClick: (form: FormChoiseGroup) => void;
+  onFormClick: (form: FormChoiceGroup) => void;
 }
 
-const ChoiseGroupPageForm: FC<ChoiseGroupFormProps> = ({form, onFormClick, isDarkTheme}) => {
-  const HandlFormClick = (form: FormChoiseGroup) => () => onFormClick(form);
+const ChoiсeGroupPageForm: FC<ChoiseGroupFormProps> = ({form, onFormClick, isDarkTheme}) => {
+  const HandlFormClick = (form: FormChoiceGroup) => () => onFormClick(form);
 
   return (
     <div className='styleButtonMenu'>
-      {FormChoiseGroupList.map((item) => (
+      {FormChoiсeGroupList.map((item) => (
         <Button
           key={item}
           isDarkTheme={isDarkTheme}
@@ -28,4 +28,4 @@ const ChoiseGroupPageForm: FC<ChoiseGroupFormProps> = ({form, onFormClick, isDar
   )
 }
 
-export default ChoiseGroupPageForm;
+export default ChoiсeGroupPageForm;

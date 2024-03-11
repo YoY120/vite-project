@@ -70,4 +70,4 @@ const RadioPage: FC<RadioProps> = () => {
   )
 }
 
-export default RadioPage
+export default RadioPage;

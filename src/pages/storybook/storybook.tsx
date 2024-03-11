@@ -21,10 +21,10 @@ import ChipsPage from './componentsPage/ChipsPage/ChipsPage';
 import {CollapsePage} from './componentsPage/CollapsePage/CollapsePage';
 import TabsPage from './componentsPage/TabsPage/TabsPage';
 import Collapse from '../../components/Collapse';
-import ChoiseGroup from '../../components/ChoiseGroup';
-import ChoiseGroupPage from './componentsPage/ChoiseGroupPage/ChoiseGroupPage';
+import ChoiseGroup from '../../components/ChoiceGroup';
+import ChoiseGroupPage from './componentsPage/ChoiceGroupPage/ChoiceGroupPage';
 
-type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiseGroup'; 
+type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiceGroup'; 
 
 const choiseList: string[] = [
   'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips', 'Text', 'Collapse', 'Tabs'
@@ -111,7 +111,7 @@ export const Storybook = () => {
       /**
        * ChoiseGroupPage
        */
-      case ('ChoiseGroup'):
+      case ('ChoiceGroup'):
         return (
           <ChoiseGroupPage list = {[]} selectedItem='' onClick={() => null} />
         )
@@ -161,7 +161,7 @@ export const Storybook = () => {
       />
       <Button
         label='ChoiseGroupPage'
-        onClick={() => setHidden('ChoiseGroup')}
+        onClick={() => setHidden('ChoiceGroup')}
       />
     </div>
   )

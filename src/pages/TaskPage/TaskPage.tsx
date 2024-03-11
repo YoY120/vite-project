@@ -44,4 +44,4 @@ const TaskPage: FC  = () => {
   )
 }
 
-export default TaskPage
+export default TaskPage;
