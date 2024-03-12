@@ -12,7 +12,7 @@ type TaskTableRowProps = {
   /**
    * Список колоннок таблицы
    */
-  columns: Column[];
+  columns?: Column[];
 }
 
 /**
@@ -22,7 +22,7 @@ const TaskTableRow: FC<TaskTableRowProps> = ({row, columns}) => {
 
   return (  
     <tr className="tableRow">
-      {columns.map(({key, renderCell, getItemLabel}) => <td className="tableRowCell" key={key}>{
+      {columns?.map(({key, renderCell, getItemLabel}) => <td className="tableRowCell" key={key}>{
         renderCell ? renderCell(row) : getItemLabel ? getItemLabel(row) : String(row[key])
       }</td>)}
     </tr>

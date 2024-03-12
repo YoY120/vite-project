@@ -44,7 +44,7 @@ const taskCoumns: Column[] = [
     renderCell: (row) =>
     <Checkbox 
       checked={row.isSuccess}
-      className="TableChecboxCenter"
+      classNames="TableChecboxCenter"
     />
   },
   {
@@ -66,7 +66,7 @@ const taskCoumns: Column[] = [
     <Checkbox 
       label={row.isArchived ? 'Сохранен' : 'Не сохранен'} 
       checked={row.isArchived}
-      className="TableChecboxCenter"
+      classNames="TableChecboxCenter"
     />
   }
 ]

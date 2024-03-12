@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import TaskTable, { Task } from "../../components/TaskTable/TaskTable";
-import { TaskTableHeaderProps } from "../../components/TaskTable/TaskTableComponents/TaskTableHeader/TaskTableHeader";
+import { TaskTableHeaderProps } from "../../components/TaskTable/TaskTableHeader/TaskTableHeader";
 /**
  * данные для таблицы
  */

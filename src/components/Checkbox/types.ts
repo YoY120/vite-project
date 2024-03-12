@@ -44,7 +44,7 @@ export type CheckboxProps = {
   /**
    * Дополнительный класс
    */
-  className?: string;
+  classNames?: string;
 
   /**
    *  Обработчик нажатия

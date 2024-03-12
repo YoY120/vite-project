@@ -3,7 +3,7 @@ import  './TaskTableHeader.css';
 import { Task } from "../TaskTable";
 
 export type Column = {
-  label: string;
+  label?: string;
   key: keyof Task;
   renderCell?: (row: Task) => React.ReactNode;
   getItemLabel?: (row: Task) => string;
@@ -14,7 +14,7 @@ export type TaskTableHeaderProps = {
   /**
    * Список колоннок таблицы
    */
-  columns: Column[];
+  columns?: Column[];
 }
 
 /**
@@ -24,7 +24,7 @@ const TaskTableHeader: FC<TaskTableHeaderProps> = ({columns}) => {
 
   return (
     <tr className="tableHeader">
-      {columns.map((item) => 
+      {columns?.map((item) => 
         <th key={item.key}>
           {item.label}
         </th>

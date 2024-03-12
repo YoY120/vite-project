@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import './Checkbox.css';
 import { CheckboxProps } from "./types";
+import classNames from "classnames";
 
 /**
  * Типизация Checkbox кнопки
@@ -12,11 +13,11 @@ const Checkbox: FC<CheckboxProps> = ({
   disabled = false,
   size = '',
   onChange = () => null,
-  className,
+  classNames,
 }) => {
   const CheckboxClassName = `Checkbox 
   ${view ? `${view}_Checkbox` : ''} 
-  ${size}_Chackbox ${className}`;
+  ${size}_Chackbox ${classNames}`;
 
   return (
     <div>
