@@ -26,10 +26,6 @@ import ChoiseGroupPage from './componentsPage/ChoiseGroupPage/ChoiseGroupPage';
 
 type WindowTypeButton = 'Button' | 'Input' | 'Radio' | 'Checkbox' | 'Switch' | 'Chips' | 'Text' | 'Collapse' | 'Tabs' | 'ChoiseGroup'; 
 
-const choiseList: string[] = [
-  'Button', 'Input', 'Radio', 'Checkbox', 'Switch', 'Chips', 'Text', 'Collapse', 'Tabs'
-]
-
 export const Storybook = () => {
   /**
    *  Переключение компонентов
@@ -41,8 +37,6 @@ export const Storybook = () => {
   const [keyChose, setKeyChose] = useState<string | null>(null);
 
 //  --------------------------------------------------------------------------------------------
-
-
   const renderInternalContent = () => {
     switch (hidden) {
       /**
@@ -117,7 +111,6 @@ export const Storybook = () => {
         )
     }
   }
-
   /**
    *  Рендер Меню
    */
@@ -173,21 +166,6 @@ export const Storybook = () => {
     <>
       {renderInternalMenu()}
       {renderInternalContent()}
-      {/* <Collapse
-        label='Тестовый колапс'
-        isOpen={isOpenCollapse}
-        onClick={() => setIsOpenCollapse(!isOpenCollapse)}
-      >
-        <div>
-          <div>dfgdfsg</div>
-          <div>fghnjfkdsg</div>
-        </div>
-      </Collapse>
-      <ChoiseGroup
-        list={choiseList}
-        selectedItem={keyChose}
-        onClick={(key) => setKeyChose(keyChose === key ? null : key)}
-      /> */}
     </>
   )
 }

@@ -1,0 +1,29 @@
+/**
+ * основной стиль
+ */
+.tableRow {
+  border: 1px solid white;
+
+  height: 70px;
+}
+/**
+ * Первая ячейка
+ */
+.tableRowCell:first-child {
+  padding-left: 20px;
+  width: 30px;
+}
+/**
+ * Стили для ячейки
+ */
+.tableRowCell {
+  text-align: center;
+  color: white;
+}
+/**
+ * Центрирования checkbox
+ */
+.labelCheckbox {
+  display: flex;
+  justify-content: center;
+}

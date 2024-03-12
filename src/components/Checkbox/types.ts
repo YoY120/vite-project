@@ -42,6 +42,11 @@ export type CheckboxProps = {
     size?: CheckboxSize;
 
   /**
+   * Дополнительный класс
+   */
+  classNames?: string;
+
+  /**
    *  Обработчик нажатия
    */
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

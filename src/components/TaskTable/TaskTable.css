@@ -1,0 +1,29 @@
+/**
+ * Фон таблицы
+ */
+.backgroundTable {
+  background: linear-gradient(to right, #25c482, #25b7c4);
+}
+/**
+ * Основной стиль таблицы
+ */
+.Table {
+  display: table;
+
+  border: 0px solid;
+  width: 100%;
+  border-collapse: collapse;
+}
+/**
+ * Общий стиль шапки таблицы
+ */
+.tableHeard {
+  height: 70px;
+}
+/**
+ * Стили для сток с данными
+ */
+.tableBody {
+  border-collapse: separate;
+  border: 1px solid white;
+}

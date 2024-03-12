@@ -7,11 +7,12 @@ import Counter from './pages/counter/counter';
 import { Calcul } from './calcul/calcul';
 import TaskPage from './pages/TaskPage/TaskPage';
 import TextPage from './pages/storybook/componentsPage/TextPage/TextPage';
+import TaskTablePage from './pages/TaskTablePage';
 
-type PageTypes = 'storybook' | 'counter' | 'calculate_(Button)' | 'myCalculate_(input)' | 'taskPage'
+type PageTypes = 'storybook' | 'counter' | 'calculate_(Button)' | 'myCalculate_(input)' | 'taskPage' | 'taskTable'
 
 const App: FC = () => {
-  const [page, setPage] = useState<PageTypes>('storybook');
+  const [page, setPage] = useState<PageTypes>('taskTable');
   
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
 
@@ -28,16 +29,18 @@ const App: FC = () => {
       case 'calculate_(Button)': return <Calcul/>;
       case 'myCalculate_(input)': return null;
       case 'taskPage': return <TaskPage/>;
+      case 'taskTable': return <TaskTablePage/>;
     }
   }
 
   const renderNavigation = () => (
     <div className='navigation'>
+      <Button label='table' onClick={() => setPage('taskTable')}/>
       <Button label='storybook' onClick={() => setPage('storybook')}/>
       <Button label='counter' onClick={() => setPage('counter')}/>
       {/* <Button label='myCalculate (input)' onClick={() => setPage('myCalculate (input)')}/> */}
       <Button label='calculate (Button)' onClick={() => setPage('calculate_(Button)')}/>
-      <Button label='Task page' onClick={() => setPage('taskPage')}/>
+      <Button label='task page' onClick={() => setPage('taskPage')}/>
       <Button
           isDarkTheme={isDarkTheme}
           label='светлая / темная тема'
